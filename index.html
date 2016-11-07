@@ -1,0 +1,528 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>grotesQuery(){};</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <style type="text/css">
+  </style>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="three.min.js"></script>
+  <script src="js/Detector.js"></script>
+  <script src="js/CanvasRenderer.js"></script>
+  <script src="js/Projector.js"></script>
+  <script src="js/OrbitControls.js"></script>
+  <script src="js/dat.gui.min.js"></script>
+  <script src="js/KeyboardState.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <script src="sidenav.js">
+
+  </script>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="solarized-dark.css" media="screen" title="no title" charset="utf-8">
+  <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">-->
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
+
+  <style media="screen">
+  html{
+    height: 3200px;
+  }
+  #podImage{
+    /*position: relative;*/
+    left: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #signature{
+    /*position: relative;*/
+    /*position: absolute;*/
+    left: 100px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Nova Mono', monospace;
+    font-size: 250%;
+  }
+  #fishImage{
+    position: relative;
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+  }
+  .language-java{
+    height: 400px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  #carriageDefn{
+    margin-bottom: 25px;
+    font-family: 'Nova Mono', monospace;
+    padding: 10px 10px 10px 10px;
+  }
+  span{
+    margin: 3px 3px 3px 3px;
+  }
+  pre{
+    margin: 0px 0px 0px 0px;
+  }
+  </style>
+  <style media="screen">
+
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">code</a>
+    <a href="#">ceramic art</a>
+    <a href="#">education</a>
+  </div>
+
+  <!-- Use any element to open the sidenav -->
+  <span onclick="openNav()">∴</span>
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+
+
+    <div id="signature">claybeard ∴ pugetsound</div>
+	
+    <div id="carriageDefn" style="
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    ">
+    ACM-UPS
+    <br>Atom Snippets, November 6 | 2016
+    <br>
+    <br>
+<a href="https://github.com/alexanderclaybeard/atom-snippets">github.com/alexanderclaybeard/atom-snippets</a>
+	<br><br>
+    "Snippets are an incredibly powerful way to generate commonly needed code syntax from a shortcut." 
+Learn more about snippets at this link   <a href="http://flight-manual.atom.io/using-atom/sections/snippets/">∴</a>
+    <br>
+    <br>
+<span>
+<p>Inside of the <a href="https://atom.io/">Atom Text</a> editor, the snippets.cson file can be accessed through the Menu > Atom > Snippets... </p>
+<br>
+<img style="display: block; width : 600px;"src="images/snippetMenu.png">
+<br>
+Snippets are written in <a href="http://coffeescript.org/">Coffee Script</a> Object Notation, thus each snippet must adhere to a specific syntax. This consisits of 4 elements :
+	<ul>
+	<li><strong>scoope</strong>, the language in which the snippet will work
+	<li><strong>name</strong>
+	<li><strong>prefix</strong>, the "trigger" 
+	<li><strong>body</strong>, fully generated body of text
+	</ul>
+<pre><code class="language-java" style=" height : 120px;">
+'.source.java':
+  'system print':
+    'prefix': 'sysprint'
+    'body': 'System.out.print($1);'
+</code></pre>
+</span>
+<br><br><br>
+    java snippets :
+    <br>
+    <br>
+    <pre><code class="language-java">
+'.source.java':
+  'sign assignment':
+    'prefix': 'signiture'
+    'body': '/*
+    # \nStudent Name : Alexander Harris
+    # \nProfessor Name : $1
+    # \nClass Title : $2
+    # \nTerm : $3
+    # \nAssignment Title : $4
+    # \n*/
+    # \n$5'
+
+  'public static void main':
+    'prefix': 'psvm'
+    'body': 'public static void main(String[] args){
+    \n\t$1
+    \n}
+    \n$2'
+
+  'empty java class':
+    'prefix': 'java'
+    'body': 'class $1{
+    \n\tpublic static void main(String[] args){
+    \n\t\t$2
+    \n\t}
+    \n}'
+
+  'empty function':
+    'prefix': 'function'
+    'body': 'public ${1:void} ${2:function}($3){
+    \n\t$4
+    \n}'
+
+  'empty method':
+    'prefix': 'method'
+    'body': 'public ${1:void} ${2:methodName}($3){
+    \n\t$4
+    \n}'
+
+  'for loop i':
+    'prefix': 'forloopi'
+    'body':'for(int i = 0; i < $1; i++){
+    \n$2
+    \n}'
+
+  'for loop j':
+    'prefix': 'forloopj'
+    'body':'for(int j = 0; j < ${1:1024}; j++){
+    \n$2
+    \n}'
+
+  'for loop k':
+    'prefix': 'forloopk'
+    'body':'for(int k = 0; k < ${1:1024}; k++){
+    \n$2
+    \n}'
+
+  'loop forever':
+    'prefix' : 'spin'
+    'body' : 'while(true){\n$1\n}'
+    </code></pre>
+    <br>
+    <br>
+   
+    javascript snippets :
+    </div>
+    <pre><code class="language-java">
+'.source.js':
+  'console log':
+    'prefix': 'clog'
+    'body': 'console.log($1)'
+
+  'immediately invoked function expression':
+    'prefix': 'iife'
+    'body':'(function(){\n$1\n})();'
+
+  'loop forever':
+    'prefix' : 'spin'
+    'body' : 'while(true){\n$1\n}'
+
+  'for loop i':
+    'prefix': 'forloopi'
+    'body':'for(var i = 0; i < ${1:1024}; i++){
+    \n$2
+    \n}'
+
+  'for loop j':
+    'prefix': 'forloopj'
+    'body':'for(var j = 0; j < ${1:1024}; j++){
+    \n$2
+    \n}'
+
+  'for loop k':
+    'prefix': 'forloopk'
+    'body': 'for(var k = 0; k < ${1:1024}; k++){
+    \n$2
+    \n}'
+
+  'THREE position xyz':
+    'prefix' : 'position'
+    'body' : """
+    $1.position.x = 0;
+    $1.position.y = 0;
+    $1.position.z = 0;
+    """
+
+
+    </code></pre>
+
+<br><br><br><br>
+<div id="carriageDefn" style="
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    ">
+
+Puget Sound Podcast<br>
+Episode 1 : Peer Allies, October 30 | 2016
+<br><br>
+Greetings and Salutations,
+<br><br>
+We are happy to announce the first <a href="http://pugetsoundpodcast.com/episodes/"> episode</a> of the Puget Sound Podcast.
+<br><br>We are so happy to get the chance to talk with two members of Peer Allies. We hope that with this conversations, we can help to foster the larger discussion throughout the campus of sexual violence and assault and that through the methods discussed in the episode, we can make strides to improve the campus awareness, reporting, and attitude about sexual violence and assault.
+<br><br>
+<audio style="width: 600px;display: block; margin: auto;" controls>
+  <source src="audio/ep1.mp3" type="audio/ogg">
+  <source src="audio/ep1.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<br>
+Make sure to subscribe to the podcast so you don't miss future episodes and leave us a rating and review in iTunes as it helps us out a lot to know what we are doing well and what we could be doing better. 
+<br><br>
+Thanks everyone and...
+<br><br>
+We'll see you next time!</div>
+
+	<br>
+	<br>
+	<br>
+    <div id="carriageDefn" style="
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    ">
+    ACM-UPS
+    <br>Snippet of the week, October 23 | 2016
+    <br>
+    <br>
+    Originally, the term <a href="https://en.wikipedia.org/wiki/Carriage_return">"carriage return"</a> referred to a mechanism or lever on a typewriter. It was used after typing a line of text and caused the assembly holding the paper (the carriage) to return to the right so that the machine was ready to type again on the left-hand side of the paper.
+    <br>
+    <br>
+    <a href="https://github.com/alexanderclaybeard/carriage-return-java">github.com/alexanderclaybeard/carriage-return-java</a>
+    <br>
+    <br>
+    <a href="https://commons.wikimedia.org/wiki/File%3AA_typewriter_(10995863465).jpg">Below image by Takashi Hososhima from Tokyo, Japan (A typewriter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</a>
+  </div>
+
+
+  <img src="./images/typewriter.png" style="
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  "/>
+
+  <pre><code class="language-java">
+    class CarriageReturn{
+      String[] circCharArr = {"|", "/", "—", "\\", "|", "/", "—", "\\"};
+      public static void main(String args[]) throws InterruptedException {
+
+        CarriageReturn cr = new CarriageReturn();
+
+        cr.slashLoader(1);
+      }
+
+      public void slashLoader(int numLines) throws InterruptedException{
+        if (numLines < 1 || numLines > 3)
+        {
+          numLines = 3;
+        }
+
+
+        System.out.println("array length : " + circCharArr.length);
+        while(true){
+          for (int i = 0; i < circCharArr.length; i++) {
+            if (i == circCharArr.length)
+            {
+              // System.out.print("\r" + circCharArr[i] + "\t\r" + circCharArr[i-1] + "\t\r" + circCharArr[i-2]);
+              i = 0;
+              // continue;
+            }
+            //Pause for 1 second
+            Thread.sleep(100);
+
+            switch(numLines){
+              case 1:
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+9)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+10)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+11)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+12)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+13)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+14)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+15)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+16)%circCharArr.length]
+              );
+              // System.out.println();
+              break;
+              case 2:
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length]
+              );
+              System.out.println();
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length]
+              );
+              break;
+              case 3:
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length]
+              );
+              System.out.println();
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length]
+              );
+              System.out.println();
+              System.out.print(
+              "\r" +
+              circCharArr[i] +
+              "\t" +
+              circCharArr[(i+1)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+2)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+3)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+4)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+5)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+6)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+7)%circCharArr.length] +
+              "\t" +
+              circCharArr[(i+8)%circCharArr.length]
+              );
+              break;
+              default:
+              System.out.print("default, something went wrong");
+              System.exit(0);
+              break;
+            }
+          }
+        }
+      }
+    }
+  </code></pre>
+	<br><br>
+
+  <div id="podImage">
+    <img src="images/2001-4d.jpeg" style="
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: o;
+    width:600px;
+    "/>
+
+    <div id="canvas" style="width:600px; margin: 0 auto;">
+      <script src="robotStart.js"> </script>
+    </div>
+
+    <div>
+      <img id="fishImage" src="images/lightlure.jpg"/>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
