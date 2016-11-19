@@ -62,8 +62,55 @@
 		<a href="https://github.com/alexanderclaybeard/">github.com/alexanderclaybeard/</a>
 		<br><br>
 		"All objects in JavaScript are descended from Object; all objects inherit methods and properties from their prototype."
-		More about prototypes at : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">PROTOTOTYPE</a>
+		More about prototypes at : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">PROTOTOTOTYPE</a>
+
+		<br><br><br>
+		<img style="display: block; width : 600px;"src="images/protoNode.png">
 		<img style="display: block; width : 600px;"src="images/exProto.png">
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<pre><code class="language-js" style=" height : 120px;"></code></pre>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<pre><code class="language-js" style=" height : 120px;">
+function getPerimeter(){
+	if (this.name === 'circle'){
+		console.log('circle circumference : ', 2*Math.PI*this.radius)
+	} else if (this.name === 'rectangle') {
+	  console.log('rectangle perimeter : ', this.length*this.width)
+	}
+}
+
+// SUPER, this is the prototype
+const shape = {
+  getPerimeter : getPerimeter
+}
+
+// sphere will have a prototype of shape
+const sphere = {
+  name : 'circle',
+  radius : '1024'
+}
+
+const rectangle = {
+  name : 'rectangle',
+  length : 10,
+  width : 5
+}
+
+Object.setPrototypeOf(sphere, shape)
+Object.setPrototypeOf(rectangle, shape)
+sphere.getPerimeter()
+rectangle.getPerimeter()
+
+		</code></pre>
+
+
+		</div>
 		<div id="carriageDefn" style="
 		width: 600px;
 		display: block;
