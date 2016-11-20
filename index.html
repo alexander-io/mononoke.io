@@ -66,15 +66,27 @@
 
 		More about prototypes at : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">PROTOTOTOTYPE</a>
 
-		<br><br><br>
+		<br><br>
 
+
+		<h2>The following is a model of prototypic relationships:</h2>
 
 		<img style="display: block; width : 600px;"src="images/protoNode.png">
 		<img style="display: block; width : 600px;"src="images/exProto.png">
 
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			The mammal node can be thought of as a prototype to walrus, meerkat, and platypus.
+			<br><br>
+			Similarly, the shape node can be regarded as the prototype of sphere, icosahedron, and triangle.
 		</p>
+		<hr>
+		<h2>Here's an example of a prototypical relationship in javascript.</h2>
+		<h3>This relationship is primarily made up of :</h3>
+		<ul>
+			<li><h3>talk function</h3></li>
+			<li><h3>mammal object</h3></li>
+			<li><h3>cat object</h3></li>
+		</ul>
 		<pre><code class="language-js" style=" height : 340px;">
 function talk(){
   console.log(this.noise)
