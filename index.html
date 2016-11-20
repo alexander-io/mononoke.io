@@ -55,12 +55,12 @@
 		margin-left: auto;
 		margin-right: auto;
 		">
-		ACM-UPS
-		<br>Prototypes in Javascript, November 20 | 2016
-		<br>
-		<br>
+		<h1>ACM-UPS</h1>
+		<h3>Prototypes in Javascript, November 20 | 2016</h3>
 		<a href="https://github.com/alexanderclaybeard/">github.com/alexanderclaybeard/</a>
-		<h1>Prototypes are basically javascript's inheritance model.</h1>
+
+
+		<h2>Prototypes are basically javascript's inheritance model.</h2>
 		<br>
 		"All objects in JavaScript are descended from Object; <strong>all objects inherit methods and properties from their prototype</strong>."
 
@@ -69,7 +69,7 @@
 		<br><br>
 
 
-		<h2>The following is a model of prototypic relationships:</h2>
+		<h2>The following are models of prototypic relationships:</h2>
 
 		<img style="display: block; width : 600px;"src="images/protoNode.png">
 		<img style="display: block; width : 600px;"src="images/exProto.png">
@@ -80,7 +80,7 @@
 			Similarly, the shape node can be regarded as the prototype of sphere, icosahedron, and triangle.
 		</p>
 		<hr>
-		<h2>Here's an example of a prototypical relationship in javascript.</h2>
+		<h2>Next is an example of a prototypical relationship in javascript.</h2>
 		<h3>This relationship is primarily made up of :</h3>
 		<ul>
 			<li><h3>talk function</h3></li>
@@ -119,22 +119,22 @@ Object.setPrototypeOf(cat, mammal)
 		<br>
 		<p>
 			The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
-			<br><br> Therefore, the cat object inherits the functions and properties of the mammal prototype, in this case cat inherits a talk property which has the talk function as it's corresponding value :
+			<br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
 			<br><br>
 			<pre>
 				<code class="language-js">
 function talk(){
   console.log(this.noise)
 }
-...
+
 const mammal = {
 	talk : talk
 }
-...
+
 const cat = {
 	noise : 'meow'
 }
-...
+
 Object.setPrototypeOf(cat, mammal)
 				</code>
 			</pre>
@@ -146,6 +146,7 @@ Object.setPrototypeOf(cat, mammal)
 
 		<pre>
 			<code>
+...
 cat.talk();
 			</code>
 		</pre>
@@ -158,7 +159,19 @@ cat.talk();
 		<br><br>
 
 <img style="display: block; width : 600px;"src="images/protoShell.png">
-<br><br>Now, finally, the cat can meow. It's all it really wanted all along.
+<br><br><h2>Now, finally, the cat can meow. It's all it really wanted all along.</h2>
+<br>But what exactly happened when the call to the <strong>talk()</strong> function occured on the <strong>cat</strong> object?
+<br><br>Well...
+<ol>
+<li>javascript interpreter looks for a talk() function "inside" the cat object</li>
+<br><li>interpreter finds no talk() function in cat object</li>
+<br><li>interpreter then checks prototypes for an inherited talk() function</li>
+<br><li>interpreter finds talk() function belonging to mammal prototype of cat</li>
+<br><li>talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</li>
+<br>
+<hr>
+<br>
+</ol>
 		<p>
 			The full javascript code for this example can be found below, with a <a href="https://en.wikipedia.org/wiki/Platypus">platypus</a> object added :
 		</p>
