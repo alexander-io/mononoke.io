@@ -62,7 +62,8 @@
 		<a href="https://github.com/alexanderclaybeard/">github.com/alexanderclaybeard/</a>
 		<h1>Prototypes are basically javascript's inheritance model.</h1>
 		<br>
-		"All objects in JavaScript are descended from Object; all objects inherit methods and properties from their prototype."
+		"All objects in JavaScript are descended from Object; <strong>all objects inherit methods and properties from their prototype</strong>."
+
 		More about prototypes at : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">PROTOTOTOTYPE</a>
 
 		<br><br><br>
@@ -97,16 +98,29 @@ cat.talk();
 platypus.talk();
 
 		</code></pre>
+		<br>
+		<p>
+			Pay specific attention to the <strong>Object.setPrototypeOf(CHILD, PROTOTYPE)</strong> method call...
+		</p>
+		<br>
 
+		<pre><code>
+...
+Object.setPrototypeOf(cat, mammal)
+Object.setPrototypeOf(platypus, mammal)
+...
+		</code></pre>
+		<br>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
+		<br>
 		<pre><code class="language-js" style=" height : 120px;">
 function getPerimeter(){
 	if (this.name === 'circle'){
 		console.log('circle circumference : ', 2*Math.PI*this.radius)
 	} else if (this.name === 'rectangle') {
-	  console.log('rectangle perimeter : ', this.length*this.width)
+  	console.log('rectangle perimeter : ', this.length*this.width)
 	}
 }
 

@@ -1,5 +1,5 @@
 // The amount of circles we want to make:
-var count = 200;
+var count = 100;
 var random;
 // Create a symbol, which we will use to place instances of later:
 var path = new Path.Circle({
@@ -40,8 +40,8 @@ function onFrame(event) {
 		// larger circles move faster than smaller circles:
 		// item.position.y -= item.bounds.height / 30;
 		// item.position.x -=item.bounds.height / 30;
-		item.position.y -= item.bounds.height/10 ;
-		item.position.x -=item.bounds.height/10 ;
+		item.position.y -= item.bounds.height/2 ;
+		item.position.x -=item.bounds.height/2 ;
 
 		// item.position.y -= item.bounds.height;
 		// item.position.x -=item.bounds.height;
