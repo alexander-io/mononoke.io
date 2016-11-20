@@ -75,7 +75,7 @@
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
-		<pre><code class="language-js" style=" height : 400px;">
+		<pre><code class="language-js" style=" height : 340px;">
 function talk(){
   console.log(this.noise)
 }
@@ -88,14 +88,9 @@ const cat = {
   noise : 'meow'
 }
 
-const platypus = {
-  noise : 'quack'
-}
-
 Object.setPrototypeOf(cat, mammal)
-Object.setPrototypeOf(platypus, mammal)
+
 cat.talk();
-platypus.talk();
 
 		</code></pre>
 		<br>
@@ -107,11 +102,30 @@ platypus.talk();
 		<pre><code>
 ...
 Object.setPrototypeOf(cat, mammal)
-Object.setPrototypeOf(platypus, mammal)
 ...
 		</code></pre>
 		<br>
 		<p>
+			The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
+			<br><br> Therefore, the cat object inherits the functions and properties of the mammal prototype, in this case cat inherits a talk property which has the talk function as it's corresponding value :
+			<br><br>
+			<pre>
+				<code class="language-js">
+function talk(){
+  console.log(this.noise)
+}
+...
+const mammal = {
+	talk : talk
+}
+...
+const cat = {
+	noise : 'meow'
+}
+...
+Object.setPrototypeOf(cat, mammal)
+				</code>
+			</pre>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 		<br>
@@ -148,7 +162,31 @@ rectangle.getPerimeter()
 
 		</code></pre>
 
+<br><br>
 
+<pre><code class="language-js" style=" height : 400px;">
+function talk(){
+console.log(this.noise)
+}
+
+const mammal = {
+talk : talk
+}
+
+const cat = {
+noise : 'meow'
+}
+
+const platypus = {
+noise : 'quack'
+}
+
+Object.setPrototypeOf(cat, mammal)
+Object.setPrototypeOf(platypus, mammal)
+cat.talk();
+platypus.talk();
+
+</code></pre>
 		</div>
 		<div id="carriageDefn" style="
 		width: 600px;
