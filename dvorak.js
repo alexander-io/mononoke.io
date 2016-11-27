@@ -660,7 +660,7 @@ function animate() {
 				w.position.y -= ktd
 				w.rotation.z -= rt
 			}, interval)
-			console.log('pressed w')}
+			}//console.log('pressed w')}
 		if (keyboard.pressed("E")){
 			e.position.y += ktd
 			e.rotation.z += rt
@@ -668,7 +668,7 @@ function animate() {
 				e.position.y -= ktd
 				e.rotation.z -= rt
 			}, interval)
-			console.log('pressed e')}
+			}//console.log('pressed e')}
 		if (keyboard.pressed("R")){
 			r.position.y += ktd
 			r.rotation.z += rt
@@ -676,7 +676,7 @@ function animate() {
 				r.position.y -= ktd
 				r.rotation.z -= rt
 			}, interval)
-			console.log('pressed R')}
+			}//console.log('pressed R')}
 		if (keyboard.pressed("T")){
 			t.position.y += ktd
 			t.rotation.z += rt
@@ -684,7 +684,7 @@ function animate() {
 				t.position.y -= ktd
 				t.rotation.z -= rt
 			}, interval)
-			console.log('pressed T')}
+			}//console.log('pressed T')}
 		if (keyboard.pressed("Y")){
 			y.position.y += ktd
 			y.rotation.z += rt
@@ -692,7 +692,7 @@ function animate() {
 				y.position.y -= ktd
 				y.rotation.z -= rt
 			}, interval)
-			console.log('pressed Y')}
+			}//console.log('pressed Y')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("U")){
 			u.position.y += ktd
@@ -701,7 +701,7 @@ function animate() {
 				u.position.y -= ktd
 				u.rotation.z -= rt
 			}, interval)
-			console.log('pressed U')}
+			}//console.log('pressed U')}
 		if (keyboard.pressed("I")){
 			eye.position.y += ktd
 			eye.rotation.z += rt
@@ -709,7 +709,7 @@ function animate() {
 				eye.position.y -= ktd
 				eye.rotation.z -= rt
 			}, interval)
-			console.log('pressed I')}
+			}//console.log('pressed I')}
 		if (keyboard.pressed("O")){
 			o.position.y += ktd
 			o.rotation.z += rt
@@ -717,7 +717,7 @@ function animate() {
 				o.position.y -= ktd
 				o.rotation.z -= rt
 			}, interval)
-			console.log('pressed O')}
+			}//console.log('pressed O')}
 		if (keyboard.pressed("P")){
 			p.position.y += ktd
 			p.rotation.z += rt
@@ -725,7 +725,7 @@ function animate() {
 				p.position.y -= ktd
 				p.rotation.z -= rt
 			}, interval)
-			console.log('pressed P')}
+			}//console.log('pressed P')}
 		if (keyboard.pressed("A")){
 			a.position.y += ktd
 			a.rotation.z += rt
@@ -733,7 +733,7 @@ function animate() {
 				a.position.y -= ktd
 				a.rotation.z -= rt
 			}, interval)
-			console.log('pressed A')}
+			}//console.log('pressed A')}
 		if (keyboard.pressed("S")){
 			s.position.y += ktd
 			s.rotation.z += rt
@@ -741,7 +741,7 @@ function animate() {
 				s.position.y -= ktd
 				s.rotation.z -= rt
 			}, interval)
-			console.log('pressed S')}
+			}//console.log('pressed S')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("D")){
 			d.position.y += ktd
@@ -750,7 +750,7 @@ function animate() {
 				d.position.y -= ktd
 				d.rotation.z -= rt
 			}, interval)
-			console.log('pressed D')}
+			}//console.log('pressed D')}
 		if (keyboard.pressed("F")){
 			f.position.y += ktd
 			f.rotation.z += rt
@@ -758,7 +758,7 @@ function animate() {
 				f.position.y -= ktd
 				f.rotation.z -= rt
 			}, interval)
-			console.log('pressed F')}
+			}//console.log('pressed F')}
 		if (keyboard.pressed("G")){
 			g.position.y += ktd
 			g.rotation.z += rt
@@ -766,7 +766,7 @@ function animate() {
 				g.position.y -= ktd
 				g.rotation.z -= rt
 			}, interval)
-			console.log('pressed G')}
+			}//console.log('pressed G')}
 		if (keyboard.pressed("H")){
 			h.position.y += ktd
 			h.rotation.z += rt
@@ -774,7 +774,7 @@ function animate() {
 				h.position.y -= ktd
 				h.rotation.z -= rt
 			}, interval)
-			console.log('pressed H')}
+			}//console.log('pressed H')}
 		if (keyboard.pressed("J")){
 			j.position.y += ktd
 			j.rotation.z += rt
@@ -782,7 +782,7 @@ function animate() {
 				j.position.y -= ktd
 				j.rotation.z -= rt
 			}, interval)
-			console.log('pressed J')}
+			}//console.log('pressed J')}
 		if (keyboard.pressed("K")){
 			k.position.y += ktd
 			k.rotation.z += rt
@@ -790,7 +790,7 @@ function animate() {
 				k.position.y -= ktd
 				k.rotation.z -= rt
 			}, interval)
-			console.log('pressed K')}
+			}//console.log('pressed K')}
 		// ||||||||||||||||||||||||||||||||||||||||||||
 		if (keyboard.pressed("L")){
 			l.position.y += ktd
@@ -799,7 +799,7 @@ function animate() {
 				l.position.y -= ktd
 				l.rotation.z -= rt
 			}, interval)
-			console.log('pressed L')}
+			}//console.log('pressed L')}
 		if (keyboard.pressed("Z")){
 			z.position.y += ktd
 			z.rotation.z += rt
@@ -807,7 +807,7 @@ function animate() {
 				z.position.y -= ktd
 				z.rotation.z -= rt
 			}, interval)
-			console.log('pressed Z')}
+			}//console.log('pressed Z')}
 		if (keyboard.pressed("X")){
 			x.position.y += ktd
 			x.rotation.z += rt
@@ -815,7 +815,7 @@ function animate() {
 				x.position.y -= ktd
 				x.rotation.z -= rt
 			}, interval)
-			console.log('pressed X')}
+			}//console.log('pressed X')}
 		if (keyboard.pressed("C")){
 			c.position.y += ktd
 			c.rotation.z += rt
@@ -823,7 +823,7 @@ function animate() {
 				c.position.y -= ktd
 				c.rotation.z -= rt
 			}, interval)
-			console.log('pressed C')}
+			}//console.log('pressed C')}
 		if (keyboard.pressed("V")){
 			v.position.y += ktd
 			v.rotation.z += rt
@@ -831,7 +831,7 @@ function animate() {
 				v.position.y -= ktd
 				v.rotation.z -= rt
 			}, interval)
-			console.log('pressed V')}
+			}//console.log('pressed V')}
 		if (keyboard.pressed("B")){
 			b.position.y += ktd
 			b.rotation.z += rt
@@ -839,7 +839,7 @@ function animate() {
 				b.position.y -= ktd
 				b.rotation.z -= rt
 			}, interval)
-			console.log('pressed B')}
+			}//console.log('pressed B')}
 
 		if (keyboard.pressed("N")){
 			n.position.y += ktd
@@ -848,7 +848,7 @@ function animate() {
 				n.position.y -= ktd
 				n.rotation.z -= rt
 			}, interval)
-			console.log('pressed N')}
+			}//console.log('pressed N')}
 		if (keyboard.pressed("M")){
 			m.position.y += ktd
 			m.rotation.z += rt
@@ -856,7 +856,7 @@ function animate() {
 				m.position.y -= ktd
 				m.rotation.z -= rt
 			}, interval)
-			console.log('pressed M')}
+			}//console.log('pressed M')}
 
 
 
@@ -867,7 +867,7 @@ function animate() {
 				one.position.y -= ktd
 				one.rotation.z -= rt
 			}, interval)
-			console.log('pressed 1')}
+			}//console.log('pressed 1')}
 		if(keyboard.pressed("2")){
 			two.position.y += ktd
 			two.rotation.x += rt
@@ -875,7 +875,7 @@ function animate() {
 				two.position.y -= ktd
 				two.rotation.x -= rt
 			}, interval)
-			console.log('pressed 2')}
+			}//console.log('pressed 2')}
 		if(keyboard.pressed("3")){
 			three.position.y += ktd
 			three.rotation.z += rt
@@ -883,7 +883,7 @@ function animate() {
 				three.position.y -= ktd
 				three.rotation.z -= rt
 			}, interval)
-			console.log('pressed 3')}
+			}//console.log('pressed 3')}
 		if(keyboard.pressed("4")){
 			four.position.y += ktd
 			four.rotation.x += rt
@@ -891,7 +891,7 @@ function animate() {
 				four.position.y -= ktd
 				four.rotation.x -= rt
 			}, interval)
-			console.log('pressed 4')}
+			}//console.log('pressed 4')}
 		if(keyboard.pressed("5")){
 			five.position.y += ktd
 			five.rotation.z += rt
@@ -899,7 +899,7 @@ function animate() {
 				five.position.y -= ktd
 				five.rotation.z -= rt
 			}, interval)
-			console.log('pressed 5')}
+			}//console.log('pressed 5')}
 		if(keyboard.pressed("6")){
 			six.position.y += ktd
 			six.rotation.x += rt
@@ -907,7 +907,7 @@ function animate() {
 				six.position.y -= ktd
 				six.rotation.x -= rt
 			}, interval)
-			console.log('pressed 6')}
+			}//console.log('pressed 6')}
 		if(keyboard.pressed("7")){
 			seven.position.y += ktd
 			seven.rotation.z += ktd
@@ -915,7 +915,7 @@ function animate() {
 				seven.position.y -= ktd
 				seven.rotation.z -= ktd
 			}, interval)
-			console.log('pressed 7')}
+			}//console.log('pressed 7')}
 		if(keyboard.pressed("8")){
 			eight.position.y += ktd
 			eight.rotation.x += ktd
@@ -923,7 +923,7 @@ function animate() {
 				eight.position.y -= ktd
 				eight.rotation.x -= ktd
 			}, interval)
-			console.log('pressed 8')}
+			}//console.log('pressed 8')}
 		if(keyboard.pressed("9")){
 			nine.position.y += ktd
 			nine.rotation.z += ktd
@@ -931,7 +931,7 @@ function animate() {
 				nine.position.y -= ktd
 				nine.rotation.z -= ktd
 			}, interval)
-			console.log('pressed 9')}
+			}//console.log('pressed 9')}
 		if(keyboard.pressed("0")){
 			zero.position.y += ktd
 			zero.rotation.x += ktd
@@ -939,7 +939,7 @@ function animate() {
 				zero.position.y -= ktd
 				zero.rotation.x -= ktd
 			}, interval)
-			console.log('pressed 0')}
+			}//console.log('pressed 0')}
 
 	}
 
