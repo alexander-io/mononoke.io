@@ -531,7 +531,7 @@ function init() {
 }
 
 function addToDOM() {
-	var canvas = document.getElementById('canvas');
+	var canvas = document.getElementById('roboCanvas');
 	canvas.appendChild(renderer.domElement);
 }
 

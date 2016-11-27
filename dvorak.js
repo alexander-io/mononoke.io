@@ -22,7 +22,7 @@ var rt = .3;
 
 // var robo;
 
-var keyboard = new KeyboardState();
+keyboard = new KeyboardState();
 
 var clock = new THREE.Clock();
 
@@ -175,7 +175,7 @@ function drawKeyboard() {
 	altKey2.position.z = -225
 	scene.add(altKey, altKey2)
 
-	var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
+	// var spaceMap = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('images/spaceMap.png')})
 	// let space = new THREE.Mesh(new THREE.BoxBufferGeometry(40,20,315), new THREE.MeshBasicMaterial({color: 0x673AB7}))
 	var wireframe = new THREE.MeshBasicMaterial({wireframe: true, wireframeLinewidth:2, color: 0x18FFFF})
 	space = new THREE.Mesh(new THREE.BoxBufferGeometry(20,40,315), wireframe)
@@ -539,8 +539,8 @@ function drawKeyboard() {
 
 
 function init() {
-	var canvasWidth = 1000;
-	var canvasHeight = 400;
+	var canvasWidth = 600;
+	var canvasHeight = 200;
 	var canvasRatio = canvasWidth / canvasHeight;
 
 	// RENDERER
@@ -552,24 +552,24 @@ function init() {
 	renderer.setClearColor( 0xAAAAAA, 1.0 );
 
 	// gui CONTROLS
-	controls = new function(){
-		this.keyTravelDistance = 3.00;
-		this.keyRotation = .3;
-		this.timeInterval = 1500;
+	// controls = new function(){
+	// 	this.keyTravelDistance = 3.00;
+	// 	this.keyRotation = .3;
+	// 	this.timeInterval = 1500;
+	//
+	// 	// this.rotationSpeedX = 0.00;
+	// 	// this.rotationSpeedY = 0.01;
+	// 	// this.rotationSpeedZ = 0.01;
+	// 	// this.leftTurretRotation = 0.01;
+	// 	// this.rightTurretRotation = 0.01;
+	// 	// this.armRotation = 0.0;
+	// 	// this.armRotation2 = 0.0;
+	// }
 
-		// this.rotationSpeedX = 0.00;
-		// this.rotationSpeedY = 0.01;
-		// this.rotationSpeedZ = 0.01;
-		// this.leftTurretRotation = 0.01;
-		// this.rightTurretRotation = 0.01;
-		// this.armRotation = 0.0;
-		// this.armRotation2 = 0.0;
-	}
-
-	gui = new dat.GUI();
-	gui.add(controls, 'keyTravelDistance', -7, 7)
-	gui.add(controls, 'timeInterval', 250, 5000)
-	gui.add(controls, 'keyRotation', 0, 1)
+	// gui = new dat.GUI();
+	// gui.add(controls, 'keyTravelDistance', -7, 7)
+	// gui.add(controls, 'timeInterval', 250, 5000)
+	// gui.add(controls, 'keyRotation', 0, 1)
 	// gui.add(controls, 'rotationSpeedX', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedY', 0, 0.5);
 	// gui.add(controls, 'rotationSpeedZ', 0, 0.5);
@@ -608,9 +608,13 @@ function addToDOM() {
 function animate() {
 	renderScene();
 	function renderScene(){
-		ktd = controls.keyTravelDistance;
-		interval = controls.timeInterval;
-		rt = controls.keyRotation;
+
+		// ktd = controls.keyTravelDistance;
+		// interval = controls.timeInterval;
+		// rt = controls.keyRotation;
+
+
+
 		// lureGlow.rotation.x += controls.rotationSpeedX;
 		// lureGlow.rotation.y += controls.rotationSpeedY;
 		// lureGlow.rotation.z += controls.rotationSpeedZ;
@@ -628,7 +632,7 @@ function animate() {
 		//
 		keyboard.update();
 		//
-
+		// console.log('render executing')
 		if(keyboard.pressed("space")){
 			space.position.y += ktd;
 			space.rotation.z += rt

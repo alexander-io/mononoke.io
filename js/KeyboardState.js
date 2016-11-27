@@ -13,7 +13,7 @@
  *
  *  See KeyboardState.k object data below for names of keys whose state can be polled
  */
-
+console.log('loading kbs')
 // initialization
 KeyboardState = function()
 {
