@@ -1,5 +1,5 @@
 // The amount of circles we want to make:
-var count = 100;
+var count = 50;
 var random;
 // Create a symbol, which we will use to place instances of later:
 var path = new Path.Circle({
