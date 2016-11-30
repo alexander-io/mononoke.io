@@ -40,8 +40,15 @@ function onFrame(event) {
 		// larger circles move faster than smaller circles:
 		// item.position.y -= item.bounds.height / 30;
 		// item.position.x -=item.bounds.height / 30;
-		item.position.y -= item.bounds.height/2 ;
-		item.position.x -=item.bounds.height/2 ;
+		// item.position.y -= item.bounds.height/2 ;
+		// item.position.x -=item.bounds.height/2 ;
+		// item.position.y -= item.bounds.height/3 ;
+		// item.position.x -=item.bounds.height/3 ;
+
+		// item.position.y -= item.bounds.height/8 ;
+		// item.position.x -=item.bounds.height/8 ;
+		item.position.y -= item.bounds.height/16 ;
+		item.position.x -=item.bounds.height/16 ;
 
 		// item.position.y -= item.bounds.height;
 		// item.position.x -=item.bounds.height;
