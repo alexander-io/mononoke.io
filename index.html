@@ -26,9 +26,11 @@
   <script src="js/Projector.js"></script>
   <script src="js/OrbitControls.js"></script>
   <script src="js/KeyboardState.js"></script>
+  <script type="text/javascript" src="node_modules/highlightjs/highlight.pack.js"></script>
+
   <link rel="stylesheet" href="solarized-dark.css" media="screen" title="no title" charset="utf-8">
   <script>
-  hljs.initHighlightingOnLoad();
+    hljs.initHighlightingOnLoad();
   </script>
 
     <script type="text/javascript">
@@ -233,14 +235,37 @@
               <img src="images/exProto.png" style="display:block; position:relative; margin:auto; width:100%;">
             </div>
             <p>
-              <h4 class="center-align"style="border-left: 10px solid #ffab00;">The mammal node can be thought of as a prototype to walrus, meerkat, and platypus.</h4>
-              <h4 class="center-align" style=" border-right:  10px solid #ffab00;">Similarly, the shape node can be regarded as the prototype of sphere, icosahedron, and triangle.</h4>
+              <p class="center-align"style="border-left: 10px solid #ffab00;">The mammal node can be thought of as a prototype to walrus, meerkat, and platypus.</>
+              <p class="center-align" style=" border-right:  10px solid #ffab00;">Similarly, the shape node can be regarded as the prototype of sphere, icosahedron, and triangle.</>
+
             </p>
             <br>
             <div class="divider"></div>
             <br>
             <div class="card-panel hoverable" style="background-color: #ffab00;">
-              <h4>Next is an example of a prototypical relationship in javascript.</h4>
+              <h5 class="center-align">Next is an example of a prototypical relationship in javascript.</h5>
+              <br>
+              <h5 class="center-align">This relationship is primarily made up of :</h5>
+              <!-- collapsible row -->
+              <div class="row">
+                <ul class="collapsible" data-collapsible="accordion">
+                 <li>
+                   <div class="collapsible-header center-align">talk function</div>
+                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                 </li>
+                 <li>
+                   <div class="collapsible-header center-align"></i>mammal object</div>
+                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                 </li>
+                 <li>
+                   <div class="collapsible-header center-align">cat object</div>
+                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                 </li>
+               </ul>
+              </div>
+              <pre><code class="language-js" style=" height : 340px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </code></pre>
             </div>
           </div>
         </div>
