@@ -1,684 +1,380 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Load the Paper.js library -->
+  <head>
+    <meta charset="utf-8">
+    <title>Materialize Template</title>
+    <!-- <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css"> -->
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
+
+    <!-- Load the Paper.js library -->
+
 	<script type="text/javascript" src="js/paper-full.js"></script>
 	<!-- Load external PaperScript and associate it with myCanvas -->
-	<script type="text/paperscript" src="js/script.js" canvas="myCanvas">
+	<script type="text/paperscript" src="script.js" canvas="mycanvas">
 	</script>
 
-	<!-- <script src="dvorak.js" canvas="dvorakCanvas"> </script> -->
-
-	<!-- <script type="text/paperscript" src="dvorak.js" canvas="dvorakCanvas">
-	</script> -->
-
-	<script src="js/jquery-1.11.3.min.js"></script>
-  <script src="three.min.js"></script>
-  <script src="js/Detector.js"></script>
-  <script src="js/CanvasRenderer.js"></script>
-  <script src="js/Projector.js"></script>
-  <script src="js/OrbitControls.js"></script>
-  <script src="js/dat.gui.js"></script>
-	<!-- <script src="js/dat.gui.min.js"></script> -->
-  <script src="js/KeyboardState.js"></script>
-  <script type="text/javascript"></script>
-
-
-
-
-	<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="solarized-dark.css" media="screen" title="no title" charset="utf-8">
-  <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">-->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Ravi+Prakash|Special+Elite" rel="stylesheet">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-  <script>
-  hljs.initHighlightingOnLoad();
-  </script>
-
-	<style media="screen">
-
-	</style>
-
-</head>
-<body>
-	<p id="therefore">
-		∴
-	</p>
-	<!-- canvas containing the paper.js 2d background animation -->
-	<canvas style="position: relative; margin: 20px auto; width: 100%; height: 4500px;"id="myCanvas" resize></canvas>
-
-
-
-	<div class="centerWrapper">
-
-		<div style="font-family: 'Baloo Bhaina', cursive; margin: 0px;"id="signature">
-		<h2 style="margin-bottom: 0px;">
-			mononoke.io
-		</h2>
-	</div>
-		<p id="signature" style="font-family: 'Baloo Bhaina', cursive;margin: 0px;">
-			claybeard ∴ pugetsound
-		</p>
-		<div id="carriageDefn" style="
-		width: 600px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		">
-		<hr><br>
-
-		<!-- put podcast here -->
-		<div id="carriageDefn" style="
-				width: 600px;
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				">
-
-		<h2 style="font-family: 'Baloo Bhaina', cursive;">Puget Sound Podcast</h2>
-		Episode 2 : Women in Economics, December 4 | 2016
-		<br><br>
-		Hello Everyone,
-		<br><br>
-
-		For this episode, we’ve spoken with Professor Fortmann and Natanya Glatt from the economics department on the topic of the underrepresentation of women in the department. This episode depicts the economics department in its current state in terms of gender distribution. Throughout the interview, we discuss the reasons why the disparity between women and men might exist in the department, and potential solutions to the issue.
-
-		<br><br>
-		<audio style="width: 600px;display: block; margin: auto;" controls>
-			<source src="audio/ep2women_economics.m4a" type="audio/ogg">
-			<source src="audio/ep1.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-		</audio>
-		<br>
-		Make sure to subscribe to the podcast so you don't miss future episodes and leave us a rating and review in iTunes as it helps us out a lot to know what we are doing well and what we could be doing better.
-		<br><br>
-		Thanks everyone and...
-		<br><br>
-		We'll see you next time!</div>
-
-
-
-		<h2 style="font-family: 'Baloo Bhaina', cursive;">CS 315</h2>
-		<h3>Three.js Dvorak Keyboard Simulator, November 26 | 2016</h3>
-		<a href="https://github.com/alexanderclaybeard/three.js-dvoark_simulator">github.com/alexanderclaybeard/three.js-dvoark_simulator/</a>
-			<p>
-				Here's an implementation of the <a href="threejs.org">three.js</a> javascript graphics library to simulate a <a href="https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">dvorak keyboard</a>. User input keystrokes are translated key ainmations in the dvorak layout in the below html canvas. Type in some keys and see for yourself...
-			</p>
-		</div>
-		<div id="dvorakCanvas" style="display:block;margin: auto;position:relative;width:600px;">
-        <script src="dvorak.js"> </script>
-
-    </div>
-		<div style="width:600px;height:auto;display:block;position:relative;margin:auto;">
-			<img src="images/dvo.png" style="width:600px;height:auto;display:block;position:relative;margin:auto;"/>
-		</div>
-
-
-		<br>
-		<div id="carriageDefn" style="
-		width: 600px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		">
-
-		<h1 style="font-family: 'Baloo Bhaina', cursive;">ACM-UPS</h1>
-		<h3>Prototypes in Javascript, November 20 | 2016</h3>
-		<a href="https://github.com/alexanderclaybeard/">github.com/alexanderclaybeard/</a>
-
-
-		<h2>Prototypes are basically javascript's inheritance model.</h2>
-		<br>
-		"All objects in JavaScript are descended from Object; <strong>all objects inherit methods and properties from their prototype</strong>."
-
-		More about prototypes at : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">PROTOTOTOTYPE</a>
-
-		<br><br>
-
-
-		<h2>The following are models of prototypic relationships:</h2>
-
-		<img style="display: block; width : 600px;"src="images/protoNode.png">
-		<img style="display: block; width : 600px;"src="images/exProto.png">
-
-		<p>
-			The mammal node can be thought of as a prototype to walrus, meerkat, and platypus.
-			<br><br>
-			Similarly, the shape node can be regarded as the prototype of sphere, icosahedron, and triangle.
-		</p>
-		<hr>
-		<h2>Next is an example of a prototypical relationship in javascript.</h2>
-		<h3>This relationship is primarily made up of :</h3>
-		<ul>
-			<li><h3>talk function</h3></li>
-			<li><h3>mammal object</h3></li>
-			<li><h3>cat object</h3></li>
-		</ul>
-		<pre><code class="language-js" style=" height : 340px;">
-function talk(){
-  console.log(this.noise)
-}
-
-const mammal = {
-  talk : talk
-}
-
-const cat = {
-  noise : 'meow'
-}
-
-Object.setPrototypeOf(cat, mammal)
-
-cat.talk();
-
-		</code></pre>
-		<br>
-		<p>
-			Pay specific attention to the <strong>Object.setPrototypeOf(CHILD, PROTOTYPE)</strong> method call...
-		</p>
-		<br>
-
-		<pre><code>
-...
-Object.setPrototypeOf(cat, mammal)
-...
-		</code></pre>
-		<br>
-		<p>
-			The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
-			<br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
-			<br><br>
-			<pre>
-				<code class="language-js">
-function talk(){
-  console.log(this.noise)
-}
-
-const mammal = {
-	talk : talk
-}
-
-const cat = {
-	noise : 'meow'
-}
-
-Object.setPrototypeOf(cat, mammal)
-				</code>
-			</pre>
-
-		<p>
-			Now that the cat object has mammal as its prototype, the talk() function can be called on the cat object :
-		</p>
-		<br>
-
-		<pre>
-			<code>
-...
-cat.talk();
-			</code>
-		</pre>
-
-		<p>
-			Save the code out to a file, I called mine pt.js
-			<br><br>
-			With the javascript runtime environment <a href="https://nodejs.org/en/">node.js</a> installed, issue <strong>$ node fineName.js</strong> while navigated to the directory which contains the javscript file
-		</p>
-		<br><br>
-
-<img style="display: block; width : 600px;"src="images/purr.png">
-<br><br><h2>Now, finally, the cat can meow. It's all it really wanted all along.</h2>
-<br>But what exactly happened when the call to the <strong>talk()</strong> function occured on the <strong>cat</strong> object?
-<br><br>Well...
-<ol>
-<li>javascript interpreter looks for a talk() function "inside" the cat object</li>
-<br><li>interpreter finds no talk() function in cat object</li>
-<br><li>interpreter then checks prototypes for an inherited talk() function</li>
-<br><li>interpreter finds talk() function belonging to mammal prototype of cat</li>
-<br><li>talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</li>
-<br>
-<hr>
-<br>
-</ol>
-		<p>
-			The full javascript code for this example can be found below, with a <a href="https://en.wikipedia.org/wiki/Platypus">platypus</a> object added :
-		</p>
-
-<br>
-
-<pre><code class="language-js" style=" height : 400px;">
-function talk(){
-console.log(this.noise)
-}
-
-const mammal = {
-talk : talk
-}
-
-const cat = {
-noise : 'meow'
-}
-
-const platypus = {
-noise : 'quack'
-}
-
-Object.setPrototypeOf(cat, mammal)
-Object.setPrototypeOf(platypus, mammal)
-cat.talk();
-platypus.talk();
-
-</code></pre>
-<br><br>
-		</div>
-		<div id="carriageDefn" style="
-		width: 600px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		">
-		ACM-UPS
-		<br>Atom Snippets, November 6 | 2016
-		<br>
-		<br>
-		<a href="https://github.com/alexanderclaybeard/atom-snippets">github.com/alexanderclaybeard/atom-snippets</a>
-		<br><br>
-		"Snippets are an incredibly powerful way to generate commonly needed code syntax from a shortcut."
-		Learn more about snippets at this link   <a href="http://flight-manual.atom.io/using-atom/sections/snippets/">∴</a>
-		<br>
-		<br>
-		<span>
-			<p>Inside of the <a href="https://atom.io/">Atom Text</a> editor, the snippets.cson file can be accessed through the Menu > Atom > Snippets... </p>
-			<br>
-			<img style="display: block; width : 600px;"src="images/snippetMenu.png">
-			<br>
-			Snippets are written in <a href="http://coffeescript.org/">Coffee Script</a> Object Notation, thus each snippet must adhere to a specific syntax. This consisits of 4 elements :
-			<ul>
-				<li><strong>scoope</strong>, the language in which the snippet will work
-				<li><strong>name</strong>
-				<li><strong>prefix</strong>, the "trigger"
-				<li><strong>body</strong>, fully generated body of text
-			</ul>
-			<pre><code class="language-java" style=" height : 120px;">
-'.source.java':
-	'system print':
-		'prefix': 'sysprint'
-		'body': 'System.out.print($1);'
-			</code></pre>
-			</span>
-			<br><br><br>
-			java snippets :
-			<br>
-			<br>
-			<pre><code class="language-java">
-'.source.java':
-  'sign assignment':
-    'prefix': 'signiture'
-    'body': '/*
-    # \nStudent Name : Alexander Harris
-    # \nProfessor Name : $1
-    # \nClass Title : $2
-    # \nTerm : $3
-    # \nAssignment Title : $4
-    # \n*/
-    # \n$5'
-
-  'public static void main':
-    'prefix': 'psvm'
-    'body': 'public static void main(String[] args){
-    \n\t$1
-    \n}
-    \n$2'
-
-  'empty java class':
-    'prefix': 'java'
-    'body': 'class $1{
-    \n\tpublic static void main(String[] args){
-    \n\t\t$2
-    \n\t}
-    \n}'
-
-  'empty function':
-    'prefix': 'function'
-    'body': 'public ${1:void} ${2:function}($3){
-    \n\t$4
-    \n}'
-
-  'empty method':
-    'prefix': 'method'
-    'body': 'public ${1:void} ${2:methodName}($3){
-    \n\t$4
-    \n}'
-
-  'for loop i':
-    'prefix': 'forloopi'
-    'body':'for(int i = 0; i < $1; i++){
-    \n$2
-    \n}'
-
-  'for loop j':
-    'prefix': 'forloopj'
-    'body':'for(int j = 0; j < ${1:1024}; j++){
-    \n$2
-    \n}'
-
-  'for loop k':
-    'prefix': 'forloopk'
-    'body':'for(int k = 0; k < ${1:1024}; k++){
-    \n$2
-    \n}'
-
-  'loop forever':
-    'prefix' : 'spin'
-    'body' : 'while(true){\n$1\n}'
-			</code></pre>
-			<br>
-			<br>
-
-			javascript snippets :
-			</div>
-			<pre><code class="language-java">
-'.source.js':
-  'console log':
-    'prefix': 'clog'
-    'body': 'console.log($1)'
-
-  'immediately invoked function expression':
-    'prefix': 'iife'
-    'body':'(function(){\n$1\n})();'
-
-  'loop forever':
-    'prefix' : 'spin'
-    'body' : 'while(true){\n$1\n}'
-
-  'for loop i':
-    'prefix': 'forloopi'
-    'body':'for(var i = 0; i < ${1:1024}; i++){
-    \n$2
-    \n}'
-
-  'for loop j':
-    'prefix': 'forloopj'
-    'body':'for(var j = 0; j < ${1:1024}; j++){
-    \n$2
-    \n}'
-
-  'for loop k':
-    'prefix': 'forloopk'
-    'body': 'for(var k = 0; k < ${1:1024}; k++){
-    \n$2
-    \n}'
-
-  'THREE position xyz':
-    'prefix' : 'position'
-    'body' : """
-    $1.position.x = 0;
-    $1.position.y = 0;
-    $1.position.z = 0;
-    """
-			</code></pre>
-			<br><br><br><br><br>
-			<div id="carriageDefn" style="
-			    width: 600px;
-			    display: block;
-			    margin-left: auto;
-			    margin-right: auto;
-			    ">
-
-			Puget Sound Podcast<br>
-			Episode 1 : Peer Allies, October 30 | 2016
-			<br><br>
-			Greetings and Salutations,
-			<br><br>
-			We are happy to announce the first <a href="http://pugetsoundpodcast.com/episodes/"> episode</a> of the Puget Sound Podcast.
-			<br><br>We are so happy to get the chance to talk with two members of Peer Allies. We hope that with this conversations, we can help to foster the larger discussion throughout the campus of sexual violence and assault and that through the methods discussed in the episode, we can make strides to improve the campus awareness, reporting, and attitude about sexual violence and assault.
-			<br><br>
-			<audio style="width: 600px;display: block; margin: auto;" controls>
-			  <source src="audio/ep1.mp3" type="audio/ogg">
-			  <source src="audio/ep1.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-			</audio>
-			<br>
-			Make sure to subscribe to the podcast so you don't miss future episodes and leave us a rating and review in iTunes as it helps us out a lot to know what we are doing well and what we could be doing better.
-			<br><br>
-			Thanks everyone and...
-			<br><br>
-			We'll see you next time!</div>
-
-				<br>
-				<br>
-				<br>
-			    <div id="carriageDefn" style="
-			    width: 600px;
-			    display: block;
-			    margin-left: auto;
-			    margin-right: auto;
-			    ">
-			    ACM-UPS
-			    <br>Snippet of the week, October 23 | 2016
-			    <br>
-			    <br>
-			    Originally, the term <a href="https://en.wikipedia.org/wiki/Carriage_return">"carriage return"</a> referred to a mechanism or lever on a typewriter. It was used after typing a line of text and caused the assembly holding the paper (the carriage) to return to the right so that the machine was ready to type again on the left-hand side of the paper.
-			    <br>
-			    <br>
-			    <a href="https://github.com/alexanderclaybeard/carriage-return-java">github.com/alexanderclaybeard/carriage-return-java</a>
-			    <br>
-			    <br>
-			    <a href="https://commons.wikimedia.org/wiki/File%3AA_typewriter_(10995863465).jpg">Below image by Takashi Hososhima from Tokyo, Japan (A typewriter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</a>
-			  </div>
-
-
-			  <img src="./images/typewriter.png" style="
-			  width: 600px;
-			  display: block;
-			  margin-left: auto;
-			  margin-right: auto;
-			  "/>
-
-			  <pre><code class="language-java">
-class CarriageReturn{
-  String[] circCharArr = {"|", "/", "—", "\\", "|", "/", "—", "\\"};
-  public static void main(String args[]) throws InterruptedException {
-
-    CarriageReturn cr = new CarriageReturn();
-
-    cr.slashLoader(1);
-  }
-
-  public void slashLoader(int numLines) throws InterruptedException{
-    if (numLines < 1 || numLines > 3)
-    {
-      numLines = 3;
-    }
-
-
-    System.out.println("array length : " + circCharArr.length);
-    while(true){
-      for (int i = 0; i < circCharArr.length; i++) {
-        if (i == circCharArr.length)
-        {
-          // System.out.print("\r" + circCharArr[i] + "\t\r" + circCharArr[i-1] + "\t\r" + circCharArr[i-2]);
-          i = 0;
-          // continue;
-        }
-        //Pause for 1 second
-        Thread.sleep(100);
-
-        switch(numLines){
-          case 1:
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+9)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+10)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+11)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+12)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+13)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+14)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+15)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+16)%circCharArr.length]
-          );
-          // System.out.println();
-          break;
-          case 2:
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length]
-          );
-          System.out.println();
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length]
-          );
-          break;
-          case 3:
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length]
-          );
-          System.out.println();
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length]
-          );
-          System.out.println();
-          System.out.print(
-          "\r" +
-          circCharArr[i] +
-          "\t" +
-          circCharArr[(i+1)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+2)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+3)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+4)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+5)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+6)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+7)%circCharArr.length] +
-          "\t" +
-          circCharArr[(i+8)%circCharArr.length]
-          );
-          break;
-          default:
-          System.out.print("default, something went wrong");
-          System.exit(0);
-          break;
-        }
+    <script type="text/javascript">
+
+    </script>
+    <style media="screen">
+      html{
+        background-color: #ECEFF1;
+        font-family: 'Source Code Pro', monospace;
+        /*font-family: 'Nova Mono', monospace;*/
       }
-    }
-  }
-}
-			  </code></pre>
-				<br><br>
+      h1, h2, h3, h4, h5  {
+        font-family: 'Nova Mono', monospace;
+      }
+      .col {
 
-			  <div id="podImage">
-			    <img src="images/2001-4d.jpeg" style="
-			    display: block;
-			    margin-left: auto;
-			    margin-right: auto;
-			    margin-top: o;
-			    width:600px;
-			    "/>
+        background-color: #607D8B;
+        color: white;
+        font-size: 3em;
+        /*padding: 50px;*/
+        /*padding: 80px;*/
+        /*margin: 10px;*/
+        text-align: center;
+        vertical-align: middle;
+        line-height: 90px;
 
-					<!-- <div id="roboCanvas" style="width:600px; margin: 0 auto;">
-			      <script src="robotStart.js"> </script>
-			    </div> -->
+        /*box-shadow: 0 4px 8px 2px grey, 0 4px 8px 3px black;*/
+        /*height: 100px;*/
+        /*width: 100px;*/
+      }
+      p{
+        line-height: 40px;
+      }
+      .card-panel{
+        padding-top: 5px;
+      }
+      .nav-wrapper{
+        /*background-color: #90A4AE;*/
+        background-color: #263238;
+      }
+      footer.page-footer{
+        background-color: #263238;
+      }
+      #footer-content{
+        background-color: #ffab00;
+      }
+      .parallax-container{
+        height: 230px;
+      }
+
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- position: relative; margin: 20px auto; width: 100%; height: 4500px; -->
+    <canvas style="z-index:-1;position: fixed; width: 100%; height: 100%;"id="mycanvas" resize></canvas>
+    <nav>
+      <div class="nav-wrapper z-depth-2" style="">
+        <a href="#!" class="brand-logo" style="margin-left:80px;font-family: 'Nova Mono', monospace;">mononoke.io</a>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li><a class="waves-effect waves-light btn-large z-depth-3" style="background-color: #FFE57F; color:#757575;">gitHub</a></li> -->
+          <li><a class="waves-effect waves-light btn-large z-depth-3" style="background-color: #FFE57F; color:#263238;">gitHub</a></li>
+
+          <!-- <li><a class="waves-effect waves-light btn-large z-depth-3"style="background-color: #FFD740; color:#9E9E9E;">code</a></li> -->
+          <li><a class="waves-effect waves-light btn-large z-depth-3"style="background-color: #FFD740; color:#263238;">code</a></li>
+          <li><a class="waves-effect waves-light btn-large z-depth-3"style="background-color: #FFC400; color:white;">author</a></li>
+          <li><a class="waves-effect waves-light btn-large z-depth-3"style="background-color: #FFAB00;">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <img class="hide-on-med-and-down"src="images/pillar.png" style="width:500px;position:absolute;right:0px;top:180px;"alt="">
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <div class="container">
+      <div class="section">
+        <div class="card-panel hoverable">
+          <h1 class="center-align">mononoke.io</h1>
+        </div>
+        <p>This website is was inspired by the creativity of <a href="https://en.wikipedia.org/wiki/Hayao_Miyazaki">Hayao Miyazaki</a> for the film <a href="https://en.wikipedia.org/wiki/Princess_Mononoke">Princess Mononoke</a> and from the design priciples of <a href="https://material.google.com/">Material Design</a>.
+          The site is open source and is available on <a href="https://github.com/alexanderclaybeard/material_design_template">GitHub</a>; if you'd like to contribute to the project, cosider forking the repository. This site contains audio content created by <a href="http://pugetsoundpodcast.com/">The Puget Sound Podcast</a>, which is a student recorded podcast available on the iTunes store, and on <a href="https://soundcloud.com/pugetsoundpodcast">SoundCloud</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- parallax -->
+    <div class="row">
+      <div class="parallax-container" style="height:570px;">
+        <div class="parallax"><img src="images/rocks_plax_crop.png" style="width:100%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
 
 
 
 
 
-	</body>
+        <!-- floating panel and text -->
+
+
+        <br>
+        <div class="col s12 m12 l12 z-depth-5">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/contrib.png">
+              <span class="card-title">Card Title</span>
+            </div>
+
+            <div class="card-content ">
+              <p style="color:black; font-size:25%;">
+              Github Open Source COntributions Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="card-action">
+              <a href="mononoke.io">∴</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- 1234  -->
+        <div class="row">
+          <div class="col s3 z-depth-5">
+            1
+          </div>
+          <div class="col s3 z-depth-5">
+            2
+          </div>
+          <div class="col s3 z-depth-5">
+            3
+          </div>
+          <div class="col s3 z-depth-5">
+            4
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <!-- shadow divs, two natures -->
+        <div class="row" >
+          <div class="col s6 z-depth-5">
+            <h3>my two natures had memory in common</h3>
+          </div>
+          <div class="col s6 z-depth-5">
+            <h3>my two natures had memory in common</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col s6 z-depth-5">
+            <h3>my two natures had memory in common</h3>
+          </div>
+          <div class="col s6 z-depth-5">
+            <h3>my two natures had memory in common</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="divider"></div>
+
+        <!-- floating panel and text -->
+        <div class="section">
+          <div class="card-panel hoverable">
+            <h1 class="center-align" >dvorak keyboard</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+        <br>
+        <br>
+        <!-- floating panel and text -->
+        <div class="section">
+          <div class="card-panel hoverable"style="background: url(images/kit.png)">
+            <h1 class="center-align">women in economics</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="divider"></div>
+        <br>
+        <br>
+        <br>
+
+        <!-- responsive divs -->
+        <div class="row">
+         <div class="col s12 m6 l6"><p>Responsive to small screens example</p></div>
+         <div class="col s12 m6 l6"><p>Responsive to small screens example</p></div>
+        </div>
+
+
+
+       <!-- collapsiable drop down -->
+       <div class="row">
+         <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">First</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header"></i>Second</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Third</div>
+            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+          </li>
+        </ul>
+       </div>
+       <div class="divider"></div>
+       <br>
+       <br>
+       <br>
+
+       <!-- card panel -->
+       <div class="card-panel hoverable">
+         <h1>Javascript Prototypes</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+
+       <!-- kodama floating elements -->
+       <div class="fixed-action-btn "style=" right: auto; left:50px;top:60px;margin-top:10px;">
+         <img src="images/kodama.png" style="width:250px;"alt="">
+         <!-- <a href="#" style="background: url(http://pngimg.com/upload/cat_PNG92.png)">asdasd</a> -->
+          <!-- <a class="btn-floating btn-large red" style="background: url(http://pngimg.com/upload/cat_PNG92.png)"> -->
+            <!-- <i class="large material-icons"><h5>∴</h5></i> -->
+          </a>
+
+          <ul style="bottom:auto;margin-top:10px;margin-right:10px;z-depth-5;">
+            <li><a class="btn-floating z-depth-3" id="drop1"style="background-color:#ffab00;"></a></li>
+            <li><a class="btn-floating z-depth-3" id="drop2"style="background-color:#FFC400;"></a></li>
+            <li><a class="btn-floating z-depth-3" id="drop3"style="background-color:#FFD740;"></a></li>
+            <li><a class="btn-floating z-depth-3" id="drop4"style="background-color:#FFE57F;"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- parallax -->
+      <div class="row">
+        <div class="parallax-container">
+          <div class="parallax"><img src="images/kodama_plax.jpg"></div>
+        </div>
+      </div>
+
+      <!-- image cards -->
+      <div class="container">
+        <div class="row"style="font-size:25%;">
+          <div class="col s12 m7 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/kodama.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content ">
+                <p style="color:black; ">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="mononoke.io">∴</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m7 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/kodama.png">
+                <span class="card-title">JS Callbacks</span>
+              </div>
+              <div class="card-content ">
+                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="mononoke.io">∴</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m7 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/kodama.png">
+                <span class="card-title">JS Promises</span>
+              </div>
+              <div class="card-content ">
+                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="mononoke.io">∴</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m7 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/kodama.png">
+                <span class="card-title">JS Async</span>
+              </div>
+              <div class="card-content ">
+                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="mononoke.io">∴</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="divider"></div>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+      <!-- footer -->
+      <footer class="page-footer">
+       <div class="container">
+         <div class="row">
+           <div class="col l6 s12 z-depth-5"id="footer-content">
+             <h5 class="white-text">Footer Content</h5>
+             <p class="grey-text text-lighten-4">My two natures had memory in common.</p>
+           </div>
+           <div class="col l4 offset-l2 s12 z-depth-5"id="footer-content">
+             <h5 class="white-text">Links</h5>
+             <ul>
+               <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+               <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+
+               <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="footer-copyright">
+          <div class="container">
+            mononoke.io
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
+      </footer>
+
+  </body>
 </html>

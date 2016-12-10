@@ -1,1 +1,2 @@
-[http://mononoke.io](http://mononoke.io)
+∴
+![Functioning on Heroku](images/readme/shiny.png)
