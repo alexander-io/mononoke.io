@@ -539,8 +539,8 @@ function drawKeyboard() {
 
 
 function init() {
-	var canvasWidth = 600;
-	var canvasHeight = 200;
+	var canvasWidth = 1200;
+	var canvasHeight = 400;
 	var canvasRatio = canvasWidth / canvasHeight;
 
 	// RENDERER
