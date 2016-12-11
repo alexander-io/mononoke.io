@@ -271,7 +271,13 @@
                  </li>
                  <li>
                    <div class="collapsible-header center-align">cat object</div>
-                   <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   <div class="collapsible-body">
+                     <pre><code class="language-js">
+  const cat = {
+   noise : 'meow'
+  }
+                     </code></pre>
+                   </div>
                  </li>
                </ul>
               </div>
@@ -291,6 +297,33 @@
   Object.setPrototypeOf(cat, mammal)
 
   cat.talk();
+              </code></pre>
+              <h5>
+          			Pay specific attention to the <strong>Object.setPrototypeOf(CHILD, PROTOTYPE)</strong> method call...
+          		</h5>
+              <pre><code class="language-js">
+  ...
+  Object.setPrototypeOf(cat, mammal)
+  ...
+          		</code></pre>
+              <p>
+                The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
+                <br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
+              </p>
+              <pre><code class="language-js">
+  function talk(){
+    console.log(this.noise)
+  }
+
+  const mammal = {
+  	talk : talk
+  }
+
+  const cat = {
+  	noise : 'meow'
+  }
+
+  Object.setPrototypeOf(cat, mammal)
               </code></pre>
             </div>
           </div>
