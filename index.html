@@ -351,37 +351,105 @@
                   <ul class="collapsible" data-collapsible="accordion">
                    <li>
                      <div class="collapsible-header">javascript interpreter looks for a talk() function "inside" the cat object</div>
-                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                     <div class="collapsible-body">
+                       <pre><code class="language-js">
+  // where could the talk funcion be?
+  const cat = {
+  	noise : 'meow'
+  }
+                       </code></pre>
+                     </div>
                    </li>
                    <li>
                      <div class="collapsible-header"></i>interpreter finds no talk() function in cat object</div>
-                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                     <div class="collapsible-body">
+                       <pre><code class="language-js">
+  const cat = {
+   noise : 'meow'
+  }
+  // no talk() to be found
+                       </code></pre>
+                     </div>
                    </li>
                    <li>
                      <div class="collapsible-header">interpreter then checks prototypes for an inherited talk() function</div>
-                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                     <div class="collapsible-body">
+                       <pre><code class="language-js">
+  const mammal = {
+   talk : talk
+  }
+
+  const cat = {
+   noise : 'meow'
+  }
+
+  // hmm, i see that cat has mammal as prototype
+  Object.setPrototypeOf(cat, mammal)
+                       </code></pre>
+                     </div>
                    </li>
                    <li>
                      <div class="collapsible-header">interpreter finds talk() function belonging to mammal prototype of cat</div>
-                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                     <div class="collapsible-body">
+                       <pre><code class="language-js">
+  const mammal = {
+   // this must be the talk function we're looking for
+   talk : talk
+  }
+                       </code></pre>
+                     </div>
                    </li>
                    <li>
-                     <div class="collapsible-header">talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</div>
-                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                     <div class="collapsible-header">talk() function is excuted on cat object, this makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</div>
+                     <div class="collapsible-body">
+                       <pre><code class="language-js">
+  ...
+  cat.talk();
+                       </code></pre>
+                     </div>
                    </li>
                  </ul>
                 </div>
 
-              <!-- <ol>
-              <li>javascript interpreter looks for a talk() function "inside" the cat object</li>
-              <br><li>interpreter finds no talk() function in cat object</li>
-              <br><li>interpreter then checks prototypes for an inherited talk() function</li>
-              <br><li>interpreter finds talk() function belonging to mammal prototype of cat</li>
-              <br><li>talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</li> -->
+            </div>
+            <div class="card-panel hoverable">
+              <p>
+                The full javascript code for this example can be found below, with a <a href="https://en.wikipedia.org/wiki/Platypus">platypus</a> object added :
+              </p>
+              <pre><code class="language-js" style="height:300px;">
+  function talk(){
+  console.log(this.noise)
+  }
+
+  const mammal = {
+  talk : talk
+  }
+
+  const cat = {
+  noise : 'meow'
+  }
+
+  const platypus = {
+  noise : 'quack'
+  }
+
+  Object.setPrototypeOf(cat, mammal)
+  Object.setPrototypeOf(platypus, mammal)
+  cat.talk();
+  platypus.talk();
+              </code></pre>
             </div>
           </div>
         </div>
 
+      </div>
+      <!-- parallax -->
+      <div class="row">
+        <div class="parallax-container">
+          <div class="parallax"><img src="images/kodama_plax.jpg"></div>
+        </div>
+      </div>
+      <div class="container">
 
         <!-- 1234  -->
         <div class="row">
