@@ -11,13 +11,18 @@
 document.getElementById('kodama').addEventListener("mouseover", function(){
 
   document.getElementById('developer').style.visibility = 'visible'
-  
+  Materialize.toast('You\'ve found the controls!', 4000)
+  setTimeout(function(){
+    // console.log('you have found the controls!')
+    // alert('you found the controls')
+
+  }, 3000)
 })
 document.getElementById('kodama').addEventListener("mouseout", function(){
 
   setTimeout(function(){
     document.getElementById('developer').style.visibility = 'hidden'
-  },2000)
+  },3300)
 })
 
 // $("kodama").mouseenter(function(){
