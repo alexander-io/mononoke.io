@@ -341,7 +341,43 @@
                 <img style="display: block; width : 100%;"src="images/purr.png">
               </div>
               <h5 class="center-align ">Now, finally, the cat can meow. It's all it really wanted all along...</h5>
-              <p></p>
+              <p class="center-align">
+                But what exactly happened when the call to the <strong>talk()</strong> function occured on the <strong>cat</strong> object?
+                <br><br>Well...
+              </p>
+
+                <!-- collapsiable drop down -->
+                <div class="row">
+                  <ul class="collapsible" data-collapsible="accordion">
+                   <li>
+                     <div class="collapsible-header">javascript interpreter looks for a talk() function "inside" the cat object</div>
+                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   </li>
+                   <li>
+                     <div class="collapsible-header"></i>interpreter finds no talk() function in cat object</div>
+                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   </li>
+                   <li>
+                     <div class="collapsible-header">interpreter then checks prototypes for an inherited talk() function</div>
+                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   </li>
+                   <li>
+                     <div class="collapsible-header">interpreter finds talk() function belonging to mammal prototype of cat</div>
+                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   </li>
+                   <li>
+                     <div class="collapsible-header">talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</div>
+                     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                   </li>
+                 </ul>
+                </div>
+
+              <!-- <ol>
+              <li>javascript interpreter looks for a talk() function "inside" the cat object</li>
+              <br><li>interpreter finds no talk() function in cat object</li>
+              <br><li>interpreter then checks prototypes for an inherited talk() function</li>
+              <br><li>interpreter finds talk() function belonging to mammal prototype of cat</li>
+              <br><li>talk() function is excuted on cat object, this function then makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</li> -->
             </div>
           </div>
         </div>
