@@ -539,8 +539,11 @@ function drawKeyboard() {
 
 
 function init() {
-	var canvasWidth = 1200;
-	var canvasHeight = 400;
+	// console.log(document.getElementById('keyboard-container').offsetWidth)
+	// var canvasWidth = 1200;
+	// var canvasHeight = 400;
+	var canvasWidth = document.getElementById('keyboard-container').offsetWidth/1.04
+	var canvasHeight = document.getElementById('keyboard-container').offsetWidth/3.2
 	var canvasRatio = canvasWidth / canvasHeight;
 
 	// RENDERER
@@ -961,6 +964,8 @@ function render() {
 	var delta = clock.getDelta();
 	cameraControls.update(delta);
 	renderer.render(scene, camera);
+	canvasWidth = document.getElementById('keyboard-container').offsetWidth/1.04
+	canvasHeight = document.getElementById('keyboard-container').offsetWidth/3.2
 
 }
 
