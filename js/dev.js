@@ -8,16 +8,37 @@
 //   })
 // },2000)
 // console.log(document.getElementById('kodama').)
+
+document.getElementById('kodama-container').addEventListener("mouseover", function(){
+  document.getElementById('developer').style.visibility = 'visible'
+  // Materialize.toast('You\'ve found the controls!', 2500)
+})
+
 document.getElementById('kodama').addEventListener("mouseover", function(){
 
-  document.getElementById('developer').style.visibility = 'visible'
-  Materialize.toast('You\'ve found the controls!', 4000)
-  setTimeout(function(){
-    // console.log('you have found the controls!')
-    // alert('you found the controls')
-
-  }, 3000)
+  // document.getElementById('developer').style.visibility = 'visible'
+  Materialize.toast('You\'ve found the controls!', 2500)
+  // setTimeout(function(){
+  //   // console.log('you have found the controls!')
+  //   // alert('you found the controls')
+  //
+  // }, 3000)
 })
+
+
+document.getElementById('drop1').addEventListener("click", function(){
+  Materialize.toast('<i class="material-icons">keyboard_arrow_up</i>', 1000)
+})
+document.getElementById('drop2').addEventListener("click", function(){
+  Materialize.toast('<i class="material-icons">keyboard_arrow_down</i>', 1000)
+})
+document.getElementById('drop3').addEventListener("click", function(){
+  Materialize.toast('<i class="material-icons">keyboard_arrow_left</i>', 1000)
+})
+document.getElementById('drop4').addEventListener("click", function(){
+  Materialize.toast('<i class="material-icons">keyboard_arrow_right</i>', 1000)
+})
+
 document.getElementById('kodama').addEventListener("mouseout", function(){
 
   setTimeout(function(){
