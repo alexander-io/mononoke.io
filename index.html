@@ -161,7 +161,7 @@
 
         <!-- floating panel and text, podcast : women in economics -->
         <div class="section">
-          <div class="card-panel hoverable"style="background: url(images/kit.png)">
+          <div class="card-panel hoverable"style="border-left: 10px solid #ffab00;background: url(images/kit.png)">
             <h1 class="center-align">Puget Sound Podcast</h1>
             <h4 class="center-align">Episode 2 : Women in Economics, December 4 | 2016</h4>
           </div>
@@ -186,7 +186,7 @@
 
         <!-- floating panel and text, DVORAK keyoard -->
         <div class="section">
-          <div class="card-panel hoverable"style="background: url(images/kit.png)">
+          <div class="card-panel hoverable"style="border-left: 10px solid #ffab00;background: url(images/kit.png)">
             <h1 class="center-align">Computer Graphics</h1>
             <h4 class="center-align">Three.js Dvorak Keyboard Simulator, November 26 | 2016</h4>
           </div>
@@ -452,7 +452,7 @@
       <div class="container">
         <!-- floating panel and text, podcast : women in economics -->
         <div class="section">
-          <div class="card-panel hoverable"style="background: url(images/kit.png)">
+          <div class="card-panel hoverable"style="border-left: 10px solid #ffab00;background: url(images/kit.png)">
             <h1 class="center-align">Puget Sound Podcast</h1>
             <h4 class="center-align">Episode 1 : Peer Allies, October 30 | 2016</h4>
           </div>
@@ -474,10 +474,222 @@
         <div class="divider"></div>
         <br>
         <br>
+        <!-- card panel -->
+        <div class="card-panel hoverable" style="border-left: 10px solid #ffab00;">
+          <h1 class="center-align">Association for Computing Machinery</h1>
+          <h4 class="center-align">Carriage Return, October 23 | 2016</h4>
+          <p>
+            Originally, the term <a href="https://en.wikipedia.org/wiki/Carriage_return">"carriage return"</a> referred to a mechanism or lever on a typewriter. It was used after typing a line of text and caused the assembly holding the paper (the carriage) to return to the right so that the machine was ready to type again on the left-hand side of the paper.
+          </p>
+        </div>
+      </div>
+      <!-- parallax -->
+      <div class="row">
+        <div class="parallax-container">
+          <div class="parallax"><img src="images/typewriter.jpg" style="width:100%; "></div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- card panel -->
+        <div class="card-panel hoverable" style="border-left: 10px solid #ffab00;">
+          <blockquote style="border-left: 10px solid #ffab00;"cite="https://upload.wikimedia.org/wikipedia/commons/0/07/A_typewriter_(10995863465).jpg">
+            The above image by Takashi Hososhima from Tokyo, Japan (A typewriter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons
+          </blockquote>
+          <a href="https://github.com/alexanderclaybeard/carriage-return-java">github.com/alexanderclaybeard/carriage-return-java</a>
+          <pre><code class="language-js" style="height:400px;">
+  class CarriageReturn{
+    String[] circCharArr = {"|", "/", "—", "\\", "|", "/", "—", "\\"};
+    public static void main(String args[]) throws InterruptedException {
+
+      CarriageReturn cr = new CarriageReturn();
+
+      cr.slashLoader(1);
+    }
+
+    public void slashLoader(int numLines) throws InterruptedException{
+      if (numLines < 1 || numLines > 3)
+      {
+        numLines = 3;
+      }
+
+
+      System.out.println("array length : " + circCharArr.length);
+      while(true){
+        for (int i = 0; i < circCharArr.length; i++) {
+          if (i == circCharArr.length)
+          {
+            // System.out.print("\r" + circCharArr[i] + "\t\r" + circCharArr[i-1] + "\t\r" + circCharArr[i-2]);
+            i = 0;
+            // continue;
+          }
+          //Pause for 1 second
+          Thread.sleep(100);
+
+          switch(numLines){
+            case 1:
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+9)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+10)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+11)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+12)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+13)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+14)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+15)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+16)%circCharArr.length]
+            );
+            // System.out.println();
+            break;
+            case 2:
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length]
+            );
+            System.out.println();
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length]
+            );
+            break;
+            case 3:
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length]
+            );
+            System.out.println();
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length]
+            );
+            System.out.println();
+            System.out.print(
+            "\r" +
+            circCharArr[i] +
+            "\t" +
+            circCharArr[(i+1)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+2)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+3)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+4)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+5)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+6)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+7)%circCharArr.length] +
+            "\t" +
+            circCharArr[(i+8)%circCharArr.length]
+            );
+            break;
+            default:
+            System.out.print("default, something went wrong");
+            System.exit(0);
+            break;
+          }
+        }
+      }
+    }
+  }
+          </code></pre>
+          <h5 class="center-align">The carriage return in java is deonted with \r</h5>
+        </div>
+
+
 
 
         <!-- 1234  -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col s3 z-depth-5">
             1
           </div>
@@ -494,9 +706,9 @@
 
         <br>
         <br>
-        <br>
+        <br> -->
         <!-- shadow divs, two natures -->
-        <div class="row" >
+        <!-- <div class="row" >
           <div class="col s6 z-depth-5">
             <h3>my two natures had memory in common</h3>
           </div>
@@ -519,10 +731,10 @@
         <br>
         <br>
 
-        <div class="divider"></div>
+        <div class="divider"></div> -->
 
         <!-- floating panel and text -->
-        <div class="section">
+        <!-- <div class="section">
           <div class="card-panel hoverable">
             <h1 class="center-align" >dvorak keyboard</h1>
           </div>
@@ -532,7 +744,7 @@
         <div class="divider"></div>
         <br>
         <br>
-        <br>
+        <br> -->
         <!-- floating panel and text -->
         <!-- <div class="section">
           <div class="card-panel hoverable"style="background: url(images/kit.png)">
@@ -546,15 +758,15 @@
         <br> -->
 
         <!-- responsive divs -->
-        <div class="row">
+        <!-- <div class="row">
          <div class="col s12 m6 l6"><p>Responsive to small screens example</p></div>
          <div class="col s12 m6 l6"><p>Responsive to small screens example</p></div>
-        </div>
+        </div> -->
 
 
 
        <!-- collapsiable drop down -->
-       <div class="row">
+       <!-- <div class="row">
          <ul class="collapsible" data-collapsible="accordion">
           <li>
             <div class="collapsible-header">First</div>
@@ -573,13 +785,13 @@
        <div class="divider"></div>
        <br>
        <br>
-       <br>
+       <br> -->
 
        <!-- card panel -->
-       <div class="card-panel hoverable">
+       <!-- <div class="card-panel hoverable">
          <h1>Javascript Prototypes</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-       </div>
+       </div> -->
 
        <!-- kodama floating elements -->
        <div class="fixed-action-btn "style=" right: auto; left:50px;top:60px;margin-top:10px;">
@@ -615,8 +827,8 @@
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content ">
-                <p style="color:black; ">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p style="color:black; ">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.
+                </p>
               </div>
               <div class="card-action">
                 <a href="mononoke.io">∴</a>
@@ -630,8 +842,8 @@
                 <span class="card-title">JS Callbacks</span>
               </div>
               <div class="card-content ">
-                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p style="color:black;">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.
+                </p>
               </div>
               <div class="card-action">
                 <a href="mononoke.io">∴</a>
@@ -645,8 +857,8 @@
                 <span class="card-title">JS Promises</span>
               </div>
               <div class="card-content ">
-                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p style="color:black;">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.
+                </p>
               </div>
               <div class="card-action">
                 <a href="mononoke.io">∴</a>
@@ -660,8 +872,8 @@
                 <span class="card-title">JS Async</span>
               </div>
               <div class="card-content ">
-                <p style="color:black;">I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p style="color:black;">On a journey to find the cure for a Tatarigami's curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.
+                </p>
               </div>
               <div class="card-action">
                 <a href="mononoke.io">∴</a>
