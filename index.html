@@ -244,11 +244,11 @@
             <div class="divider"></div>
             <br>
             <div class="card-panel hoverable" style="background-color: #ffab00;">
-              <div class="card-panel hoverable" style="background-color: white;">
+              <div class="card-panel hoverable" style="background-color: white; border-left: 10px solid #ffab00;">
                 <h5 class="center-align">Next is an example of a prototypical relationship in javascript.</h5>
               </div>
               <br>
-              <div class="card-panel hoverable" style="background-color:white;">
+              <div class="card-panel hoverable" style="background-color:white; border-left: 10px solid #ffab00;">
                 <h5 class="center-align">This relationship is primarily made up of :</h5>
               </div>
               <!-- collapsible row -->
@@ -317,18 +317,22 @@
 
   cat.talk();
               </code></pre>
-              <h5>
-          			Pay specific attention to the <strong>Object.setPrototypeOf(CHILD, PROTOTYPE)</strong> method call...
-          		</h5>
+              <div class="card-panel hoverable" style="background-color:white; border-left: 10px solid #ffab00;">
+                <h5 >
+            			Pay specific attention to the <strong>Object.setPrototypeOf(CHILD, PROTOTYPE)</strong> method call...
+            		</h5>
+              </div>
               <pre><code class="language-js">
   ...
   Object.setPrototypeOf(cat, mammal)
   ...
           		</code></pre>
-              <p>
-                The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
-                <br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
-              </p>
+              <div class="card-panel hoverable" style="background-color:white;">
+                <p>
+                  The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
+                  <br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
+                </p>
+              </div>
               <pre><code class="language-js">
   function talk(){
     console.log(this.noise)
@@ -344,9 +348,11 @@
 
   Object.setPrototypeOf(cat, mammal)
               </code></pre>
-              <p>
-          			Now that the cat object has mammal as its prototype, the talk() function can be called on the cat object :
-          		</p>
+              <div class="card-panel hoverable" style="background-color:white; border-left: 10px solid #ffab00;">
+                <p>
+            			Now that the cat object has mammal as its prototype, the talk() function can be called on the cat object :
+            		</p>
+              </div>
               <pre><code class="language-js">
   ...
   cat.talk();
