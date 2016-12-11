@@ -20,6 +20,7 @@
 
 
   	</script>
+    <script type="text/javascript" src="js/moon.js"></script>
     <script src="three.min.js"></script>
     <script src="js/Detector.js"></script>
     <script src="js/CanvasRenderer.js"></script>
@@ -92,6 +93,9 @@
   <body>
     <!-- position: relative; margin: 20px auto; width: 100%; height: 4500px; -->
     <canvas style="z-index:-1;position: fixed; width: 100%; height: 100%;"id="mycanvas" resize></canvas>
+    <div id="moon" class="z-depth-5"style="visibility: hidden;background-color:black;position:fixed;right:0px; height:400px; width:400px; border-radius:50%;">
+
+    </div>
     <nav>
       <div class="nav-wrapper z-depth-2" style="">
         <a href="#!" class="brand-logo" style="margin-left:80px;font-family: 'Nova Mono', monospace;">mononoke.io</a>
@@ -327,7 +331,7 @@
   Object.setPrototypeOf(cat, mammal)
   ...
           		</code></pre>
-              <div class="card-panel hoverable" style="background-color:white;">
+              <div class="card-panel hoverable" style="background-color:white; border-left:10px solid #ffab00;">
                 <p>
                   The <strong>Object.setPrototypeOf(cat, mammal)</strong> is setting the cat object to have a prototype of mammal.
                   <br><br> Therefore, the <strong>cat object inherits the functions and properties of the mammal prototype</strong>, in this case : cat inherits a talk property which has the talk() function as it's corresponding value :
@@ -357,25 +361,35 @@
   ...
   cat.talk();
               </code></pre>
-              <p>
-                Save the code out to a file, I called mine pt.js
-          			<br><br>
-          			With the javascript runtime environment <a href="https://nodejs.org/en/">node.js</a> installed, issue <strong>$ node fineName.js</strong> while navigated to the directory which contains the javscript file
-              </p>
-              <div class="card-panel hoverable">
+              <div class="card-panel hoverable" style="background-color:white;border-left:10px solid #ffab00;">
+                <p>
+                  Save the code out to a file, I called mine pt.js
+            			<br><br>
+            			With the javascript runtime environment <a href="https://nodejs.org/en/">node.js</a> installed, issue <strong>$ node fineName.js</strong> while navigated to the directory which contains the javscript file
+                </p>
+
+              </div>
+              <div class="card-panel hoverable" style=" border-left: 10px solid #ffab00;">
                 <img style="display: block; width : 100%;"src="images/purr.png">
               </div>
-              <h5 class="center-align ">Now, finally, the cat can meow. It's all it really wanted all along...</h5>
-              <p class="center-align">
-                But what exactly happened when the call to the <strong>talk()</strong> function occured on the <strong>cat</strong> object?
-                <br><br>Well...
-              </p>
+              <div class="card-panel hoverable" style="background-color:white; border-left: 10px solid #ffab00;">
+                <h5 class="center-align ">Now, finally, the cat can meow. It's all it really wanted all along...</h5>
+              </div>
+              <div class="card-panel hoverable" style="background-color:white; border-left: 10px solid #ffab00">
+                <p class="center-align">
+                  But what exactly happened when the call to the <strong>talk()</strong> function occured on the <strong>cat</strong> object?
+                  <br><br>Well...
+                </p>
+              </div>
 
                 <!-- collapsiable drop down -->
                 <div class="row">
                   <ul class="collapsible" data-collapsible="accordion">
                    <li>
-                     <div class="collapsible-header">javascript interpreter looks for a talk() function "inside" the cat object</div>
+                     <div class="collapsible-header">
+                       <!-- code icon -->
+                      <i class="material-icons">code</i>
+                      javascript interpreter looks for a talk() function "inside" the cat object</div>
                      <div class="collapsible-body">
                        <pre><code class="language-js">
   // where could the talk funcion be?
@@ -386,7 +400,9 @@
                      </div>
                    </li>
                    <li>
-                     <div class="collapsible-header"></i>interpreter finds no talk() function in cat object</div>
+                     <div class="collapsible-header"><!-- code icon -->
+                      <i class="material-icons">code</i>
+                      interpreter finds no talk() function in cat object</div>
                      <div class="collapsible-body">
                        <pre><code class="language-js">
   const cat = {
@@ -397,7 +413,10 @@
                      </div>
                    </li>
                    <li>
-                     <div class="collapsible-header">interpreter then checks prototypes for an inherited talk() function</div>
+                     <div class="collapsible-header">
+                       <!-- code icon -->
+                        <i class="material-icons">code</i>
+                        interpreter then checks prototypes for an inherited talk() function</div>
                      <div class="collapsible-body">
                        <pre><code class="language-js">
   const mammal = {
@@ -414,7 +433,10 @@
                      </div>
                    </li>
                    <li>
-                     <div class="collapsible-header">interpreter finds talk() function belonging to mammal prototype of cat</div>
+                     <div class="collapsible-header">
+                       <!-- code icon -->
+                        <i class="material-icons">code</i>
+                        interpreter finds talk() function belonging to mammal prototype of cat</div>
                      <div class="collapsible-body">
                        <pre><code class="language-js">
   const mammal = {
@@ -425,7 +447,10 @@
                      </div>
                    </li>
                    <li>
-                     <div class="collapsible-header">talk() function is excuted on cat object, this makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</div>
+                     <div class="collapsible-header">
+                       <!-- code icon -->
+                        <i class="material-icons">code</i>
+                        talk() function is excuted on cat object, this makes a log to the console with the <strong>this.noise</strong> property belonging to cat object</div>
                      <div class="collapsible-body">
                        <pre><code class="language-js">
   ...
