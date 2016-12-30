@@ -214,7 +214,10 @@ sys.ps1 = '~~~ '
 
           <p>Now that you know the essence of the Python interactive prompt startup script, let's save the contents out to a file. I decided to call mine .PYTHONSTARTUP (notice the '.' which is used as a prefix for the file and makes the file "hidden"). I saved this file out to my home directory : /Users/Alex/ </p>
 
-          <p>Last we'll make an edit to our .bash_profile which is located in the home directory. Because the file is a "hidden", in order to see it in our terminal issue $ ls -a, which reads "list all". Note, if you don't have a .bash_profile, .profile, or .bashrc file located in your home directory you can make one by issuing $ touch .bash_profile.</p>
+          <p>Last we'll make an edit to our .bash_profile which is located in the home directory. Because the file is a "hidden", in order to see it in our terminal issue $ ls -a, which reads "list all". Note, if you don't have a .bash_profile, .profile, or .bashrc file located in your home directory you can make one by issuing $ touch .bash_profile. In order to edit the .bash_profile, use your favorite command line text editor, I'll be using nano. Once inside of the file, append the following code to the end of the file :</p>
+          <pre><code class="language-python">
+export PYTHONSTARTUP=~/.PYTHONSTARTUP
+          </code></pre>
 
         </div>
 
