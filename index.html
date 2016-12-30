@@ -195,9 +195,10 @@
           <img src="images/importsys.png" style="display:block; position:relative; margin:auto; width:100%;">
           <p>By issuing '$ help(sys)' after importing the sys module, you may view the specifications of the sys module, including the functions that are made available through the importation of the module.</p>
 
-          <p>After issuing '$ help(sys)', the Python interpreter will return a list of  </p>
-
+          <p>After issuing '$ help(sys)', read through the content that is returned by the Python interactive prompt. Look for : ps1 = '>>>'  </p>
           <img src="images/helpsys.png" style="display:block; position:relative; margin:auto; width:100%;">
+          <p>The variables ps1 and ps2 indicate "strings specifying the primary and secondary prompt symbol of the interpreter. These are only defined if the interpreter is in interactive mode." Now, press 'q' to exit the system specific specifications for the sys module and to return to the ineractive prompt. Once you're navigated back to the Python interactive prompt, let's change the value of the ps1 variable by issuing : sys.ps1 = '~~~ '</p>
+
           <pre><code class="language-python"></code></pre>
 
         </div>
