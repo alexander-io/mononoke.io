@@ -199,7 +199,9 @@
           <img src="images/helpsys.png" style="display:block; position:relative; margin:auto; width:100%;">
           <p>The variables ps1 and ps2 indicate "strings specifying the primary and secondary prompt symbol of the interpreter. These are only defined if the interpreter is in interactive mode." Now, press 'q' to exit the system specific specifications for the sys module and to return to the ineractive prompt. Once you're navigated back to the Python interactive prompt, let's change the value of the ps1 variable by issuing : sys.ps1 = '~~~ '</p>
           <img src="images/sysps1.png" style="display:block; position:relative; margin:auto; width:100%;">
-          <p>Did you catch that? Issuing sys.ps1 = '~~~ ' has changed the interactive prompt symbol! Now, try issuing the same command but change the value inside of the quotes to whatever you desire!</p>
+          <p>Did you catch that? Issuing sys.ps1 = '~~~ ' has changed the interactive prompt symbol! Now, try issuing the same command but change the value inside of the quotes to whatever you desire! However, we still have a problem... once we exit ther Python interactive prompt and re-enter, our modification the the sys.ps1 does not persist.</p>
+
+
           <pre><code class="language-python"></code></pre>
 
         </div>
