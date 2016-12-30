@@ -201,9 +201,13 @@
           <img src="images/sysps1.png" style="display:block; position:relative; margin:auto; width:100%;">
           <p>Did you catch that? Issuing sys.ps1 = '~~~ ' has changed the interactive prompt symbol! Now, try issuing the same command but change the value inside of the quotes to whatever you desire! However, we still have a problem... once we exit ther Python interactive prompt and re-enter, our modification the the sys.ps1 variable does not persist. In order to make the modification persist we must complete a two part process: first, we'll create a script to be executed within the Pyton interactive prompt upon startup, next we'll edit our .bash_profile (or possibly .profile, .bashrc) in order to execute the startup python script. Take a look at this code, the contents make up the Python startup script :</p>
 
+          <pre><code class="language-python">
+# import the sys module
+import sys
 
-
-          <pre><code class="language-python"></code></pre>
+# assign the sys.ps1 variable to the desired prompt symbol
+sys.ps1 = ' ' + u'\U0001f40d'.ljust(2) + ' $ '
+          </code></pre>
 
         </div>
 
