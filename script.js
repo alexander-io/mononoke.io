@@ -3,12 +3,15 @@ window.onload = function(){
 	console.log(canvas)
 }
 // The amount of circles we want to make:
-var count = 50;
+var count = 16;
 var random;
+
+var speed_ratio = .5
+
 // Create a symbol, which we will use to place instances of later:
 var path = new Path.Circle({
 	center: [0, 0],
-	radius: 10,
+	radius: 32,
 	// fillColor: 'white',
   // fillColor: 'grey',
 	fillColor: 	'#FFD700',
@@ -79,8 +82,8 @@ function onFrame(event) {
 		// Move the item 1/20th of its width to the right. This way
 		// larger circles move faster than smaller circles:
 		if (u) {
-			item.position.y -= item.bounds.height/16 ;
-			item.position.x -=item.bounds.height/64 ;
+			item.position.y -= (item.bounds.height/16)*speed_ratio ;
+			item.position.x -=(item.bounds.height/64)*speed_ratio ;
 			// regen at this position
 			if (item.position.y < -10){
 				item.position.y = view.size._height*1.2;
@@ -88,8 +91,8 @@ function onFrame(event) {
 				item.position.x = random;
 			}
 		} else if (d){
-			item.position.y += item.bounds.height/16 ;
-			item.position.x -=item.bounds.height/64 ;
+			item.position.y += (item.bounds.height/16)*speed_ratio ;
+			item.position.x -=(item.bounds.height/64)*speed_ratio ;
 			// regen at this position
 			if (item.position.y > view.size._height*1.2){
 				item.position.y = -0;
@@ -97,8 +100,8 @@ function onFrame(event) {
 				item.position.x = random;
 			}
 		} else if (l){
-			item.position.y -= item.bounds.height/64 ;
-			item.position.x -=item.bounds.height/16 ;
+			item.position.y -= (item.bounds.height/64)*speed_ratio ;
+			item.position.x -=(item.bounds.height/16)*speed_ratio ;
 			// regen at this position
 			if (item.position.x < 0){
 				item.position.x = view.size._width*1.1;
@@ -106,16 +109,16 @@ function onFrame(event) {
 				item.position.y = random;
 			}
 		} else if (r){
-			item.position.y -= item.bounds.height/64 ;
-			item.position.x +=item.bounds.height/16 ;
+			item.position.y -= (item.bounds.height/64)*speed_ratio ;
+			item.position.x +=(item.bounds.height/16)*speed_ratio ;
 			if (item.position.x > view.size._width){
 				item.position.x = -50;
 				random = Math.random()*view.size._height;
 				item.position.y = random;
 			}
 		} else {
-			item.position.y -= item.bounds.height/16 ;
-			item.position.x -=item.bounds.height/16 ;
+			item.position.y -= (item.bounds.height/16)*speed_ratio ;
+			item.position.x -=(item.bounds.height/16)*speed_ratio ;
 			if (item.position.y < -10){
 				random = Math.random()*10;
 				item.position.y = view.size._height /2;
@@ -123,31 +126,5 @@ function onFrame(event) {
 				item.position.x = view.size._width + random;
 			}
 		}
-		// item.position.y -= item.bounds.height/16 ;
-		// item.position.x -=item.bounds.height/16 ;
-
-		// item.position.y -= item.bounds.height;
-		// item.position.x -=item.bounds.height;
-
-		// If the item has left the view on the right, move it back
-		// to the left:
-    // console.log(item.bounds.left)
-    // console.log(view.size.width)
-		// if (item.bounds.left > view.size.width) {
-    // // if (item.bounds.left < 10) {
-		// 	item.position.x = -item.bounds.width;
-		// }
-
-    // if (item.position.x < 50){
-    //   item.position.x = 1200;
-    // }
-
-
-
-    // console.log(item.position.y)
-
-    // if (item.bounds.right > view.size.width) {
-		// 	item.position.x = item.bounds.width;
-		// }
 	}
 }

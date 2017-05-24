@@ -7,8 +7,8 @@ var path = new Path.Circle({
 	radius: 10,
 	// fillColor: 'white',
   // fillColor: 'grey',
-	fillColor: 	'#FFD700',
-	// fillColor: 'black',
+	// fillColor: 	'#FFD700',
+	fillColor: 'black',
 	// strokeColor: 'grey'
 	strokeColor: '#FFD700',
 	// strokeColor: 'black',
