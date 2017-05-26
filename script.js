@@ -2,6 +2,7 @@ window.onload = function(){
 	var canvas = document.getElementById('mycanvas')
 	console.log(canvas)
 }
+
 // The amount of circles we want to make:
 var count = 16;
 var random;
@@ -82,14 +83,28 @@ function onFrame(event) {
 		// Move the item 1/20th of its width to the right. This way
 		// larger circles move faster than smaller circles:
 		if (u) {
+
+			// take current position of them 'element', subtract the expression from it :
+				// where expression = (item.bounds.height/16)*speed_ratio
+
 			item.position.y -= (item.bounds.height/16)*speed_ratio ;
+
+			// take current position of them 'element', subtract the expression from it :
+				// where expression = (item.bounds.height/64)*speed_ratio ;
+
 			item.position.x -=(item.bounds.height/64)*speed_ratio ;
+
+
 			// regen at this position
 			if (item.position.y < -10){
 				item.position.y = view.size._height*1.2;
 				random = Math.random()*view.size._width;
 				item.position.x = random;
 			}
+
+
+
+
 		} else if (d){
 			item.position.y += (item.bounds.height/16)*speed_ratio ;
 			item.position.x -=(item.bounds.height/64)*speed_ratio ;

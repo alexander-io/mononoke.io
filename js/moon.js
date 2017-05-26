@@ -12,6 +12,13 @@ window.onscroll = function(){
 
 var ancientScroll = function(){
   scrollVal = document.body.scrollTop*-1
+  // console.log(scrollVal)
+  if ((scrollVal*-1) >350 ){
+    document.getElementById("mood").style.visibility = "hidden";
+  } else {
+    document.getElementById("mood").style.visibility = "visible";
+
+  }
   // console.log(document.body.scrollTop)
   // console.log(document.getElementById("moon").style.right)
   document.getElementById("moon").style.right = scrollVal + 'px'
