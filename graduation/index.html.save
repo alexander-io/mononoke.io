@@ -1,0 +1,82 @@
+<html>
+        <head>
+                <title>Grad-Party</title>
+
+
+		<link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+   	 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    		<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
+		<style>
+			img {
+				display:block;
+				margin: 0 auto;	
+			}
+		</style>		
+
+
+        </head>
+	<body>
+                <div class="container">
+                        <div class="section">
+                                <div class="card-panel">
+                                        <!--<h1 class="center-align">grad party</h1>-->
+
+
+					 <img id="window"src="./images/0001.jpg"></img>
+
+
+
+                                        <div style="position:relative; top:50px;"class="left-align"><a id="sub"class="btn-floating btn-large left-align waves-effect waves-light red"><i class="material-icons">-</i></a>
+                                        </div>
+                                        <div style="top:0px"class="right-align"><a class="btn-floating btn-large right-align waves-effect waves-light red"><i class="material-icons">+</i></a>
+                                        </div>
+
+                                        <script>
+                                        var curr_image = '0001.jpg'
+
+                                        var window = document.getElementById("window")
+
+
+                                        // we're defining this function so that it can be called as a second parameter to the addEventListener function for the sub_button (found below)
+                                        var next_img = function(){
+                                                if (curr_image == '0626.jpg'){
+                                                        curr_image = '0001.jpg';
+							window.src="./images/"+curr_image
+                                                } else {
+                                                        // the current image value needs to be incremented
+                                                        // let's get a sub-string of the '0001.jpg' string to remove the '.jpg' extension
+                                                        substrrr = curr_image.substring(0,5)
+							substrrr = parseInt(substrrr)
+							// once the extension is removed, then convert the remanining value to integer format
+                                                        // next, increment the extracted integer
+							++substrrr
+							z
+                                                        // take the incremented integer and convert it back to the extension form '0002.jpg'
+                                                        substrrr = substrrr.toString()
+							// finally, update the img element with id="window" and replace the current image with a new image that corresponds to the incremented string value
+							
+                                                
+		
+						}
+
+
+                                        }
+
+                                        var sub_button = document.getElementById("sub")
+                                        sub_button.addEventListener("click", function(){next_img();console.log('gotem')})
+                                        </script>
+
+				
+
+                                </div>
+                        </div>
+                </div>
+        </body>
+       
+</html>
+
+
+
+

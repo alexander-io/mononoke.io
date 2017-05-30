@@ -1,0 +1,22 @@
+{
+  "name": "social_rec_web",
+  "version": "0.0.1",
+  "description": "SocialRec Web Client",
+  "main": "ls",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jkuras/SocialRec.git"
+  },
+  "author": "jkuras, alexander-io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jkuras/SocialRec/issues"
+  },
+  "homepage": "https://github.com/Jkuras/SocialRec#readme",
+  "dependencies": {
+    "firebase": "^4.0.0"
+  }
+}

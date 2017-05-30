@@ -1,0 +1,160 @@
+<html>
+        <head>
+                <title>Grad-Party</title>
+
+
+		<link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+   	 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    		<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.js"></script>
+		<style>
+			img {
+				display:block;
+				margin: 0 auto;	
+			}
+			
+			
+		</style>		
+		
+
+        </head>
+	<body>
+                <div class="container">
+                        <div class="section">
+                                <div class="card-panel" id="zyzz">
+                                        <!--<h1 class="center-align">grad party</h1>-->
+
+
+
+
+
+                                        <div style="position:relative; top:50px;"class="left-align"><a id="sub"class="btn-floating btn-large left-align waves-effect waves-light red"><i class="material-icons">-</i></a>
+                                        </div>
+                                        <div style="top:0px"class="right-align"><a id="plus"class="btn-floating btn-large right-align waves-effect waves-light red"><i class="material-icons">+</i></a>
+                                        </div>
+
+                                        <script>
+					var rand = Math.ceil((Math.random() * 1000) % 626)
+                                        var res = ''
+					if (rand < 10 ){res = '000'}
+					else if (rand < 100) {res = '00'}
+					else if (rand < 1000) {res = '0'}
+					
+					var curr_image = res+rand.toString()+'.jpg'//'0001.jpg'
+
+                                        //var window = document.getElementById("window")
+
+					var image = document.createElement("img")
+					var imageParent = document.getElementById("zyzz")
+					image.id = "window"
+					image.src = "./images/"+curr_image
+					console.log('image parent', imageParent)
+					imageParent.appendChild(image)
+
+					
+	
+					var window = image
+
+
+					
+					
+					console.log(image)
+					
+					//console.log('init window src', window.src)
+                                        // we're defining this function so that it can be called as a second parameter to the addEventListener function for the sub_button (found below)
+                                        var next_img = function(){
+                                                if (curr_image == '0626.jpg'){
+                                                        curr_image = '0001.jpg';
+							image.src = "./images/"+curr_image
+							imageParent.appendChild(image)
+                                                } else {
+                                                        // the current image value needs to be incremented
+                                                        // let's get a sub-string of the '0001.jpg' string to remove the '.jpg' extension
+                                                        substrrr = curr_image.substring(0,5)
+							substrrr = parseInt(substrrr)
+							// once the extension is removed, then convert the remanining value to integer format
+                                                        // next, increment the extracted integer
+							++substrrr
+	
+							var zeroes = ''
+							if (substrrr < 10 ){
+								zeroes = '000'
+							} else if (substrrr < 100){
+								zeroes = '00'
+							} else if (substrrr < 1000){
+
+								zeroes = '0'
+							} else {console.log('something went wrong')}
+
+							
+
+                                                        // take the incremented integer and convert it back to the extension form '0002.jpg'
+                                                        substrrr = substrrr.toString()
+							var result = zeroes + substrrr + '.jpg'
+							// finally, update the img element with id="window" and replace the current image with a new image that corresponds to the incremented string value							
+							image.src = "./images/"+ result
+							imageParent.appendChild(image)
+                                                	curr_image = result
+		
+						}
+
+
+                                        }
+
+					var prev_img = function(){
+						if (curr_image == "0001.jpg"){
+							curr_image = "0626.jpg"
+							image.src = "./images/"+curr_image
+							imageParent.appendChild(image)
+						
+						} else {
+							// the current image value needs to be incremented
+                                                        // let's get a sub-string of the '0001.jpg' string to remove the '.jpg' extension
+                                                        substrrr = curr_image.substring(0,5)
+                                                        substrrr = parseInt(substrrr)
+                                                        // once the extension is removed, then convert the remanining value to integer format
+                                                        // next, increment the extracted integer
+                                                        --substrrr
+
+                                                        var zeroes = ''
+                                                        if (substrrr < 10 ){
+                                                                zeroes = '000'
+                                                        } else if (substrrr < 100){
+                                                                zeroes = '00'
+                                                        } else if (substrrr < 1000){
+
+                                                                zeroes = '0'
+                                                        } else {console.log('something went wrong')}
+
+
+
+                                                        // take the incremented integer and convert it back to the extension form '0002.jpg'
+                                                        substrrr = substrrr.toString()
+                                                        var result = zeroes + substrrr + '.jpg'
+                                                        // finally, update the img element with id="window" and replace the current image wi$
+                                                        image.src = "./images/"+ result
+                                                        imageParent.appendChild(image)
+                                                        curr_image = result
+						}
+					}
+
+                                        var sub_button = document.getElementById("sub")
+					var plus_button = document.getElementById("plus")
+
+					plus_button.addEventListener("click", function(){next_img()})
+                                        sub_button.addEventListener("click", function(){prev_img();console.log('gotem')})
+                                        </script>
+
+				
+
+                                </div>
+                        </div>
+                </div>
+        </body>
+       
+</html>
+
+
+
+
