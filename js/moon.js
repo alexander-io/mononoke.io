@@ -14,9 +14,9 @@ var ancientScroll = function(){
   scrollVal = document.body.scrollTop*-1
   // console.log(scrollVal)
   if ((scrollVal*-1) >350 ){
-    document.getElementById("mood").style.visibility = "hidden";
+    document.getElementById("moon").style.visibility = "hidden";
   } else {
-    document.getElementById("mood").style.visibility = "visible";
+    document.getElementById("moon").style.visibility = "visible";
 
   }
   // console.log(document.body.scrollTop)
